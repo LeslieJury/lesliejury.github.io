@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Leslie Jury — Portfolio</title>
+    <title>Leslie Jury: Homepage</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,42 @@
     </aside>
 
     <main class="center" role="main">
-        <!-- Projects gallery (start here) -->
+
+
+        <!-- Basic information & resume area (also in right panel for quick access) -->
+        <section aria-labelledby="info-heading" class="info-section" style="margin-bottom:26px">
+            <h2 id="info-heading" style="margin-top:0;color:#4b2140">About / Quick Info</h2>
+            <p style="margin:8px 0 12px 0;color:#5a4558">I am a Computer Programming major specializing in embedded systems. I enjoy building firmware, debugging hardware interactions, and programming in C/C++.</p>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+                <a class="btn" href="resume.pdf" download>⬇︎ Download Resume</a>
+                <a class="btn secondary" href="projects.html">View All Projects</a>
+                <a class="btn" href="contact.html">Contact Me</a>
+            </div>
+
+            <div style="margin-top:16px;color:#6b4b67">
+                <strong>Location:</strong> Longmont, CO • <strong>Open to:</strong> internships and entry-level roles
+            </div>
+        </section>
+
+        <!-- Space for longer content: experience, education, projects details -->
+        <section aria-labelledby="experience-heading">
+            <h2 id="experience-heading" style="color:#4b2140">Experience & Education</h2>
+            <div style="margin-top:12px;display:grid;gap:12px">
+                <div style="background:rgba(255,255,255,0.6);padding:12px;border-radius:10px">
+                    <div style="font-weight:700">IT Specialist - Classroom Technology</div>
+                    <div style="font-size:13px;color:#634358">Brigham Young University - Idaho • January 2023 – January 2024</div>
+                    <div style="margin-top:8px;color:#583a50">In Classroom Technology, I received tickets from teachers and students about problems concerning their computers, projectors, internet, etc.</div>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.6);padding:12px;border-radius:10px">
+                    <div style="font-weight:700">A.A.S. Computer Programming (Embedded Systems Emphasis)</div>
+                    <div style="font-size:13px;color:#634358">Brigham Young University - Idaho • Expected Graduation: Winter 2027</div>
+                    <div style="margin-top:8px;color:#583a50">Relevant coursework: ECEN 240: Fundamentals of Digital Systems, ECEN 260: Microprocessor Based-System Design, ECEN 250: Electric Circuit Analysis 2</div>
+                </div>
+            </div>
+        </section>
+                <!-- Projects gallery (start here) -->
         <section aria-labelledby="projects-heading" style="margin-bottom:26px">
             <h2 id="projects-heading" style="margin:0 0 12px 0;color:#4b2140">Projects</h2>
             <p style="margin:0 0 18px 0;color:#6b475e">My favorite school and personal projects.</p>
@@ -100,7 +135,7 @@
             <div class="projects">
                 <!-- Example project cards: replace images and links -->
                 <article class="project-card">
-                    <a class="project-thumb" href="projects/discrete-love.html" aria-label="Project: Discrete Love: An educational visual novel">
+                    <a class="project-thumb" href="discrete-love.html" aria-label="Project: Discrete Love: An educational visual novel">
                         <!-- placeholder graphic -->
                         <img src="discrete_love.png" alt="Discrete Love — project cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
                         <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,66 +149,20 @@
                 </article>
 
                 <article class="project-card">
-                    <a class="project-thumb" href="projects/project-rtos.html" aria-label="Project: RTOS Scheduler">
+                    <a class="project-thumb" href="psp-modding.html" aria-label="Project: PSP Modding">
                         <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="200" height="80" rx="8" fill="#fff" opacity="0.12"></rect>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, Arial" font-size="14" fill="#3a2a38">RTOS Scheduler</text>
+                            <img src="psp.jpg" alt="PSP Modding — project cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
                         </svg>
                     </a>
                     <div class="project-body">
-                        <h3>RTOS Scheduler</h3>
-                        <p>Custom scheduling project and timing analysis for real-time tasks.</p>
+                        <h3>PSP Modding</h3>
+                        <p>Modding projects for the PlayStation Portable, including custom firmware and game modifications.</p>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <a class="project-thumb" href="projects/project-iot.html" aria-label="Project: IoT Gateway">
-                        <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="200" height="80" rx="8" fill="#fff" opacity="0.12"></rect>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, Arial" font-size="14" fill="#3a2a38">IoT Gateway</text>
-                        </svg>
-                    </a>
-                    <div class="project-body">
-                        <h3>IoT Gateway</h3>
-                        <p>Gateway bridging BLE devices to a cloud API, with secure provisioning.</p>
-                    </div>
-                </article>
 
                 <!-- Add more project cards here as you want -->
-            </div>
-        </section>
-
-        <!-- Basic information & resume area (also in right panel for quick access) -->
-        <section aria-labelledby="info-heading" class="info-section" style="margin-bottom:26px">
-            <h2 id="info-heading" style="margin-top:0;color:#4b2140">About / Quick Info</h2>
-            <p style="margin:8px 0 12px 0;color:#5a4558">I am a Computer Programming major specializing in embedded systems. I enjoy building firmware, debugging hardware interactions, and optimizing systems for resource-constrained devices.</p>
-
-            <div style="display:flex;gap:12px;flex-wrap:wrap">
-                <a class="btn" href="resume.pdf" download>⬇︎ Download Resume</a>
-                <a class="btn secondary" href="projects.html">View All Projects</a>
-                <a class="btn" href="contact.html">Contact Me</a>
-            </div>
-
-            <div style="margin-top:16px;color:#6b4b67">
-                <strong>Location:</strong> City, State • <strong>Open to:</strong> internships and entry-level roles
-            </div>
-        </section>
-
-        <!-- Space for longer content: experience, education, projects details -->
-        <section aria-labelledby="experience-heading">
-            <h2 id="experience-heading" style="color:#4b2140">Experience & Education</h2>
-            <div style="margin-top:12px;display:grid;gap:12px">
-                <div style="background:rgba(255,255,255,0.6);padding:12px;border-radius:10px">
-                    <div style="font-weight:700">Intern — Embedded Systems</div>
-                    <div style="font-size:13px;color:#634358">Company Name • Summer 2024</div>
-                    <div style="margin-top:8px;color:#583a50">Worked on firmware features, peripheral bring-up, and test automation for microcontroller products.</div>
-                </div>
-
-                <div style="background:rgba(255,255,255,0.6);padding:12px;border-radius:10px">
-                    <div style="font-weight:700">B.S. Computer Programming (Embedded Emphasis)</div>
-                    <div style="font-size:13px;color:#634358">Institution Name • Expected 20XX</div>
-                    <div style="margin-top:8px;color:#583a50">Relevant coursework: Embedded Systems, RTOS, Microcontrollers, Digital Design.</div>
-                </div>
             </div>
         </section>
 
