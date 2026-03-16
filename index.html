@@ -53,7 +53,7 @@
 
     <aside class="right-panel" aria-label="Profile and quick links">
         <div class="profile">
-            <div class="avatar" aria-hidden="true">LJ</div>
+            <img class="profile-picture" src="images/profile.jpg" alt="Leslie Jury profile photo" />
             <div>
                 <div class="title">Leslie Jury</div>
                 <div class="subtitle">Computer Programming (Embedded Systems)</div>
@@ -97,14 +97,14 @@
 
     <main class="center" role="main">
 
-        <section aria-labelledby="projects-heading" style="margin-bottom:26px">
+<section aria-labelledby="projects-heading" style="margin-bottom:26px">
             <h2 id="projects-heading" style="margin:0 0 12px 0;color:#4b2140">Projects</h2>
             <p style="margin:0 0 18px 0;color:#6b475e">My favorite school and personal projects.</p>
 
             <div class="projects">
                 <!-- Example project cards: replace images and links -->
                 <article class="project-card">
-                    <a class="project-thumb" href="discrete-love.html" aria-label="Project: Discrete Love: An educational visual novel">
+                    <a class="project-thumb" href="https://juryleslie.itch.io/discrete-love" target="_blank" aria-label="Project: Discrete Love: An educational visual novel">
                         <!-- placeholder graphic -->
                         <img src="images/discrete_love.png" alt="Discrete Love" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
                         <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,24 +119,7 @@
                 </article>
 
                 <article class="project-card">
-                    <a class="project-thumb" href="psp-modding.html" aria-label="Project: PSP Modding">
-                        <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="200" height="80" rx="8" fill="#fff" opacity="0.12"></rect>
-                            <img src="images/psp.jpg" alt="PSP Modding" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
-                            <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-
-                        </svg>
-                    </a>
-                    <div class="project-body">
-                        <h3>PSP Modding</h3>
-                        <p>I modified multiple Playstation Portable consoles and experimented with putting my own files in them.
-                        </p>
-                        
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <a class="project-thumb" href="nucleo-lightstick.html" aria-label="Project: Smart lightstick (STM32 Nucleo)">
+                    <a class="project-thumb" href="lightstick.html" aria-label="Project: Smart lightstick (STM32 Nucleo)">
                         <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="200" height="80" rx="8" fill="#fff" opacity="0.12"></rect>
                             <img src="images/lightstick0.jpeg" alt="Smart Lightstick (STM Nucleo)" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
@@ -158,7 +141,7 @@
                     <a class="project-thumb" href="hackathons.html" aria-label="Project: Hackathon Projects">
                         <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="200" height="80" rx="8" fill="#fff" opacity="0.12"></rect>
-                            <img src="images/hackathon_circuit.jpg" alt="Hackathon Projects" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
+                            <img src="images/hackathon.jpg" alt="Hackathon Projects" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
                             <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 
                         </svg>
@@ -171,32 +154,25 @@
                     </div>
                 </article>
 
-                <!-- Add more project cards here as you want -->
-            </div>
+                <article class="project-card">
+                    <a class="project-thumb" href="https://leslie-j.neocities.org/" target="_blank" aria-label="Project: Personal Neocities Website">
+                        <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="200" height="80" rx="8" fill="#fff" opacity="0.12"></rect>
+                            <img src="images/neocities.png" alt="Neocities" style="width:100%;height:100%;object-fit:cover;border-radius:8px" loading="lazy" decoding="async" />
+                            <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 
-
+                        </svg>
+                    </a>
+                    <div class="project-body">
+                        <h3>Personal Neocities Website</h3>
+                        <p>I built my Neocities website to keep as a place to work on my HTML and CSS, it's my first launched HTML website and I like to keep a blog 
+                            on my website as well as pages for my hobbies, favorite music, games, etc.
+                        </p>
+                    </div>
+                </article>
                 <!-- Add more project cards here as you want -->
             </div>
         </section>
-
-
-        <!-- Basic information & resume area (also in right panel for quick access) -->
-        <section aria-labelledby="info-heading" class="info-section" style="margin-bottom:26px">
-            <h2 id="info-heading" style="margin-top:0;color:#4b2140">About / Quick Info</h2>
-            <p style="margin:8px 0 12px 0;color:#5a4558">I am a Computer Programming major specializing in embedded systems. I enjoy building firmware, debugging hardware interactions, and programming in C/C++.</p>
-
-            <div style="display:flex;gap:12px;flex-wrap:wrap">
-                <a class="btn" href="resume.pdf" download>⬇︎ Download Resume</a>
-                <a class="btn secondary" href="projects.html">View All Projects</a>
-                <a class="btn" href="contact.html">Contact Me</a>
-            </div>
-
-            <div style="margin-top:16px;color:#6b4b67">
-                <strong>Location:</strong> Longmont, CO • <strong>Open to:</strong> internships and entry-level roles
-            </div>
-        </section>
-
-        <!-- Space for longer content: experience, education, projects details -->
         <section aria-labelledby="experience-heading">
             <h2 id="experience-heading" style="color:#4b2140">Experience & Education</h2>
             <div style="margin-top:12px;display:grid;gap:12px">
@@ -222,6 +198,8 @@
                 </div>
             </div>
         </section>        
+
+
         <h2 id="gallery-heading" style="margin-top:0;color:#4b2140">Gallery</h2>
 
         <div class="gallery-grid">
@@ -240,7 +218,11 @@
 
         </div>
 
+
+
         <div style="height:60vh"></div> <!-- room to scroll and expand -->
+
+        
     </main>
 
     <!-- Small script area for easy future customization (e.g., mobile nav) -->
