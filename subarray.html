@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Leslie Jury: Power Program</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+
+    
+</head>
+<body>
+    <header class="top-banner" role="banner">
+        <div class="name">
+            <div class="monogram" aria-hidden="true">LJ</div>
+            <div>
+                <div style="font-size:18px">Leslie Jury</div>
+                <div style="font-size:12px;opacity:0.95">Computer Programming • Embedded Systems</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="left-sidebar" aria-label="Primary navigation">
+        <!-- Edit these links to point to your pages: about.html, contact.html, projects.html, hobbies.html -->
+        <a class="nav-btn" href="index.html" title="Home">
+            <span style="font-size:18px">🏠</span>
+            <span style="font-size:10px">Home</span>
+        </a>
+        <a class="nav-btn" href="about.html" title="About">
+            <span style="font-size:18px">👋</span>
+            <span style="font-size:10px">About</span>
+        </a>
+        <a class="nav-btn" href="projects.html" title="Projects">
+            <span style="font-size:18px">💻</span>
+            <span style="font-size:10px">Projects</span>
+        </a>
+        <a class="nav-btn" href="contact.html" title="Contact">
+            <span style="font-size:18px">✉️</span>
+            <span style="font-size:10px">Contact</span>
+        </a>
+        <a class="nav-btn" href="hobbies.html" title="Hobbies">
+            <span style="font-size:18px">🎨</span>
+            <span style="font-size:10px">Hobbies</span>
+        </a>
+        
+        <!-- Add more nav icons/links as you like -->
+    </nav>
+
+    <aside class="right-panel" aria-label="Profile and quick links">
+        <div class="profile">
+            <img class="profile-picture" src="images/profile.jpg" alt="Leslie Jury profile photo" />
+            <div>
+                <div class="title">Leslie Jury</div>
+                <div class="subtitle">Computer Programming (Embedded Systems)</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="font-weight:700;margin-bottom:8px">Contact & Resume</div>
+            <div class="links">
+                <!-- Replace resume.pdf with your actual file when available -->
+                <a class="btn" href="files/leslie_jury_resume_2026.pdf" download>⬇︎ Download Resume</a>
+                <a class="btn secondary" href="https://www.linkedin.com/in/lesliejury" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <div style="margin-top:10px;font-size:13px;color:#e54ec4">Email: <a href="mailto:lesliejury3@gmail.com">lesliejury3@gmail.com</a></div>
+        </div>
+
+        <div class="card">
+            <div style="font-weight:700;margin-bottom:8px">Basic Info</div>
+            <div style="font-size:14px; line-height:1.45">
+                Computer Programmer with an emphasis in embedded systems. Interested in firmware, hardware-software integration, PCB design, and full-stack creative projects.
+            </div>
+        </div>
+
+        <div class="card">
+            <div style="font-weight:700;margin-bottom:8px">Skills (short)</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span style="background:var(--pastel-green);padding:6px 8px;border-radius:8px;font-size:13px">C/C++/C#</span>
+                <span style="background:var(--pastel-yellow);padding:6px 8px;border-radius:8px;font-size:13px">Python</span>
+                <span style="background:var(--pastel-blue);padding:6px 8px;border-radius:8px;font-size:13px">Linux</span>
+                <span style="background:var(--pastel-purple);padding:6px 8px;border-radius:8px;font-size:13px">PCB</span>
+                <span style="background:var(--pastel-green);padding:6px 8px;border-radius:8px;font-size:13px">FPGA</span>
+                <span style="background:var(--pastel-yellow);padding:6px 8px;border-radius:8px;font-size:13px">Windows/Mac</span>
+                <span style="background:var(--pastel-blue);padding:6px 8px;border-radius:8px;font-size:13px">Git</span>
+                <span style="background:var(--pastel-purple);padding:6px 8px;border-radius:8px;font-size:13px">Java</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <main class="center" role="main">
+            <h2 style="margin-top:0;color:#4b2140">Subarray Program</h2>
+            <p style="font-size:14px; line-height:1.5">The subarray program is a simple Python script that calculates the maximum sum of a subarray of a given size.
+                I programmed it in my Algorithm design class, and I also did a writeup for this code in the PDF you see below. For context, the questions 3, 4, and 5
+                can be ignored, 3 is my prototype pseduocode, 4 is pseudocode created with AI that I analyzed and 5 is my reflection on that code. Question 6 is my 
+                final pseudocode, and the Python code is my final implementation of the program.
+            </p>
+            <div style="margin-top:20px;padding:16px;background:#f5f5f5;border-radius:8px;overflow-x:auto">
+                <h3 style="margin-top:0">Source Code</h3>
+                <pre><code class="language-python">import json
+
+# Ask the user for the JSON file name
+file = input("Please enter the file name: ")
+file_name = ("130.13." + file + ".json")
+print(file_name)
+
+
+# Load the JSON file
+with open(file_name, 'r') as file:
+
+    arr = json.load(file)
+    array = arr["array"]
+
+    print("Before sorting: ", array)
+    n = len(array)
+
+sub_size_input = input("Enter the sub-array size: ")
+sub_size = int(sub_size_input)
+
+best_sub = array[0:sub_size]
+
+for i in range(1, len(array) - sub_size + 1):
+    current_sub = array[i:i+sub_size]
+    if sum(current_sub) > sum(best_sub):
+        best_sub = current_sub
+
+average = sum(best_sub) / sub_size
+
+print(f"Maximum average with a subarray length of {sub_size}: {average:.2f}")
+print("Best:", best_sub)
+
+            </code></pre>
+            </div>
+            <iframe src="files/power_design.pdf" style="width:100%;height:80vh;border:none;border-radius:8px"></iframe>
+
+        <div style="height:60vh"></div> <!-- room to scroll and expand -->
+    </main>
+
+    <!-- Small script area for easy future customization (e.g., mobile nav) -->
+    <script>
+        /* Placeholder: add small JS here if you want hamburger menus or dynamic content.
+             Example: detect missing resume and hide download button, or load projects via JSON.
+        */
+    </script>
+</body>
+</html>

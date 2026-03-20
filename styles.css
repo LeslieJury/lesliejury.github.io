@@ -3,7 +3,7 @@
             --left-width: 84px;       /* thinnest sidebar */
             --right-width: 300px;     /* basic info panel */
             --bg-pink: #ffcee6;       /* main pink */
-            --pastel-purple: #e7d9ff;
+            --pastel-purple: #f6d9ff;
             --pastel-yellow: #fff3b0;
             --pastel-blue: #d6f0ff;
             --pastel-green: #d9ffd9;
@@ -190,7 +190,7 @@
 }
 
 .hobbies-list li {
-    background: linear-gradient(90deg, var(--pastel-purple), var(--pastel-blue));
+    background: var(--pastel-purple);
     color: #4b2350;
     font-weight: 600;
     font-size: 15px;
@@ -207,7 +207,7 @@
 .hobbies-list li:hover {
     transform: translateY(-3px) scale(1.04);
     box-shadow: 0 6px 18px rgba(255, 174, 210, 0.18);
-    background: linear-gradient(90deg, var(--pastel-blue), var(--pastel-purple));
+    background: var(--pastel-blue);
     cursor: pointer;
 }
 
