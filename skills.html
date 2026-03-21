@@ -3,58 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Leslie Jury: Timeline</title>
+    <title>Leslie Jury: PSP Modding</title>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 
-    <style>
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 8px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #333;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -32px;
-            top: 4px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: #333;
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px #333;
-        }
-        
-        .timeline-item:last-child::after {
-            content: '';
-            position: absolute;
-            left: -24px;
-            top: 24px;
-            width: 0;
-            height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 10px solid #333;
-        }
-    </style>
+    
 </head>
 <body>
     <header class="top-banner" role="banner">
@@ -134,6 +89,120 @@
     </aside>
 
     <main class="center" role="main">
-        <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/qa4mgvgp9v2vhrom" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;padding:8px 8px 8px 0"><a href="https://padlet.com?ref=embed" style="display:flex;align-items:center;gap:5px;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><span aria-hidden style="color:#9E9E9E;font-size:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1">Made with</span><img src="https://padlet.net/emails/padlet_email_logo_2026_text-dark-200.png" height="12" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none;display:block" alt="Made with Padlet"></a></div></div>
+        <div id="galaxy-container">
+  <canvas id="galaxy"></canvas>
+</div>
+
+
+        <div style="height:60vh"></div> <!-- room to scroll and expand -->
+    </main>
+
+    <!-- Small script area for easy future customization (e.g., mobile nav) -->
+    <script>
+const canvas = document.getElementById("galaxy");
+const ctx = canvas.getContext("2d");
+
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
+
+const hobbies = [
+  "Coding",
+  "Embedded Systems",
+  "C Language",
+  "Anime",
+  "Gaming",
+  "Electronics",
+  "Web Development",
+  "PCB Design",
+  "FPGA",
+  "Python",
+  "Linux",
+  "Crafts",
+  "Travel",
+  "Photography",
+  "Console Modding",
+  "Cooking",
+  "Collecting",
+  "Drawing",
+  "Sociallizing",
+  "Evangelion",
+  "Soldering",
+  "Excercise",
+  "Weightlifting",
+  "Hiking",
+  "Biking",
+  "Arduino",
+  "Raspberry Pi",
+  "Open Source",
+  "Tech Communities",
+  "Learning New Skills",
+  "Problem Solving",
+  "Fighting Games",
+  "Retro Games",
+  "PC Building",
+  "Music",
+  "Movies"
+    
+];
+
+let nodes = [];
+
+// Create nodes
+hobbies.forEach(hobby => {
+  nodes.push({
+    text: hobby,
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.5,
+    vy: (Math.random() - 0.5) * 0.5
+  });
+});
+
+// Draw loop
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw connections
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      let dx = nodes[i].x - nodes[j].x;
+      let dy = nodes[i].y - nodes[j].y;
+      let dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 150) {
+        ctx.strokeStyle = "rgba(255,255,255,0.1)";
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x, nodes[i].y);
+        ctx.lineTo(nodes[j].x, nodes[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Draw nodes
+  nodes.forEach(node => {
+    ctx.beginPath();
+    ctx.arc(node.x, node.y, 5, 0, Math.PI * 2);
+    ctx.fillStyle = "#ffcee6";
+    ctx.fill();
+
+    ctx.fillStyle = "#ffffff";
+    ctx.font = "12px Arial";
+    ctx.fillText(node.text, node.x + 8, node.y + 4);
+
+    // Movement
+    node.x += node.vx;
+    node.y += node.vy;
+
+    // Bounce
+    if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+    if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+  });
+
+  requestAnimationFrame(draw);
+}
+
+draw();
+    </script>
 </body>
 </html>
