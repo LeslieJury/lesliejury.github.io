@@ -129,6 +129,31 @@
             gap:18px;
             margin-bottom:28px;
         }
+        .new-card{
+            border-radius: 14px;
+            overflow: hidden;
+            background:linear-gradient(135deg, var(--pastel-purple), var(--pastel-blue));
+            display: grid;
+            grid-template-rows: 160fr 240fr;
+            height: 400px;
+        }
+        .new-card-image {
+            grid-template-rows: 1/2;
+            height: 150px;
+            width: 100%;
+            object-fit: cover
+        }
+        article .new-card-body {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .new-card-body a,.new-card-body p,.new-card-body h3{
+            margin: 0;
+        }
+
+
         .project-card{
             border-radius:14px; overflow:hidden;
             background: linear-gradient(135deg,var(--pastel-purple), var(--pastel-blue));
