@@ -1,0 +1,12 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title | default: "My Site" }}</title>
+</head>
+<body>
+  {% include top.html %}
+  {{ content }}
+  {% include bottom.html %}
+</body>
+</html>   
