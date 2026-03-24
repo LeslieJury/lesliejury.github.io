@@ -363,3 +363,14 @@ article .new-card-body {
 body {
     color: #2D1637; /* Option 1: A deep, rich eggplant purple (My top recommendation for readability) */
 }
+
+
+::selection {
+  background-color: #FFB6C1; /* Light Pink */
+  color: #FFFFFF; /* White */
+}
+
+::-moz-selection {
+  background-color: #FFB6C1;
+  color: #FFFFFF;
+}   
