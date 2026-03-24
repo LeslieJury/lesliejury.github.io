@@ -1,231 +1,131 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Leslie Jury: Projects</title>
+---
+layout: default
+title: Projects
+---
 
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+<section aria-labelledby="projects-heading" style="margin-bottom:26px">
+    <h2 id="projects-heading" style="margin:0 0 12px 0;color:#4b2140">Projects</h2>
+    <p style="margin:0 0 18px 0;color:#6b475e">My favorite school and personal projects.</p>
 
-    -->
-</head>
-<body>
-    <header class="top-banner" role="banner">
-        <div class="name">
-            <div class="monogram" aria-hidden="true">LJ</div>
-            <div>
-                <div style="font-size:18px">Leslie Jury</div>
-                <div style="font-size:12px;opacity:0.95">Computer Programming • Embedded Systems</div>
+    <div class="projects">
+
+        <article class="new-card">
+
+            <img class="new-card-image" src="images/lightstick0.jpeg" alt="Lightstick">
+            <div class="new-card-body">
+                <a href="lightstick.html">
+                <h3>Smart Lightstick (STM32 Nucleo)</h3>
+                </a>
+            <p>I utilized C and the STM32 Nucleo Microcontroller to make an interactive lightstick that flashes to the BPM
+                of your favorite songs. 
+            <a class="btn" href="files/ECEN_260_Final_Project_Report.pdf" target="_blank">Download Report</a>
+
+            </p>
             </div>
-        </div>
-    </header>
 
-    <nav class="left-sidebar" aria-label="Primary navigation">
-        <!-- Edit these links to point to your pages: about.html, contact.html, projects.html, hobbies.html -->
-        <a class="nav-btn" href="index.html" title="Home">
-            <span style="font-size:18px">🏠</span>
-            <span style="font-size:10px">Home</span>
-        </a>
-        <a class="nav-btn" href="about.html" title="About">
-            <span style="font-size:18px">👋</span>
-            <span style="font-size:10px">About</span>
-        </a>
-        <a class="nav-btn" href="projects.html" title="Projects">
-            <span style="font-size:18px">💻</span>
-            <span style="font-size:10px">Projects</span>
-        </a>
-        <a class="nav-btn" href="contact.html" title="Contact">
-            <span style="font-size:18px">✉️</span>
-            <span style="font-size:10px">Contact</span>
-        </a>
-        <a class="nav-btn" href="skills.html" title="Skills">
-            <span style="font-size:18px">🎲</span>
-            <span style="font-size:10px">Skills</span>
-        </a>
-    </nav>
+        </article>
 
-    <aside class="right-panel" aria-label="Profile and quick links">
-        <div class="profile">
-            <img class="profile-picture" src="images/profile.jpg" alt="Leslie Jury profile photo" />
-            <div>
-                <div class="title">Leslie Jury</div>
-                <div class="subtitle">Computer Programming (Embedded Systems)</div>
+
+        <article class="new-card">
+
+            <img class="new-card-image" src="images/hackathon_circuit.jpg" alt="Displays">
+            <div class="new-card-body">
+                <a href="hackathons.html">
+                    <h3>Click here to see a dedicated page of all my hackathon projects</h3>
+                </a>
+            <p>A collection of projects I've made for hackathons</p>
             </div>
-        </div>
 
-        <div class="card">
-            <div style="font-weight:700;margin-bottom:8px">Contact & Resume</div>
-            <div class="links">
-                <!-- Replace resume.pdf with your actual file when available -->
-                <a class="btn" href="files/leslie_jury_resume_2026.pdf" download>⬇︎ Download Resume</a>
-                <a class="btn secondary" href="https://www.linkedin.com/in/lesliejury" target="_blank" rel="noopener">LinkedIn</a>
+        </article>
+
+
+        <article class="new-card">
+
+            <img class="new-card-image" src="images/helloworld0.jpeg" alt="Displays">
+            <div class="new-card-body">
+                <a href="displays.html">
+                    <h3>Displays (STM32 Nucleo)</h3>
+                </a>
+            <p>I experimented with different displays for the STM32 Nucleo, PCD8544 and LCD1602, and made a few fun text and animation projects with them.
+            </p>
             </div>
-            <div style="margin-top:10px;font-size:13px;color:#e54ec4">Email: <a href="mailto:lesliejury3@gmail.com">lesliejury3@gmail.com</a></div>
-        </div>
 
-        <div class="card">
-            <div style="font-weight:700;margin-bottom:8px">Basic Info</div>
-            <div style="font-size:14px; line-height:1.45">
-                Computer Programmer with an emphasis in embedded systems. Interested in firmware, hardware-software integration, PCB design, and full-stack creative projects.
+        </article>
+
+
+        <article class="new-card">
+
+            <img class="new-card-image" src="images/python.png" alt="Subarray Algorithm">
+            <div class="new-card-body">
+                <a href="subarray.html">
+                    <h3>Subarray Algorithm</h3>
+                </a>
+            <p>I implemented what is referred to as the sliding window algorithm in Python, which calculates the maximum sum of a subarray of a given size. </p>
             </div>
-        </div>
 
-        <div class="card">
-            <div style="font-weight:700;margin-bottom:8px">Skills (short)</div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-                <span style="background:var(--pastel-green);padding:6px 8px;border-radius:8px;font-size:13px">C/C++/C#</span>
-                <span style="background:var(--pastel-yellow);padding:6px 8px;border-radius:8px;font-size:13px">Python</span>
-                <span style="background:var(--pastel-blue);padding:6px 8px;border-radius:8px;font-size:13px">Linux</span>
-                <span style="background:var(--pastel-purple);padding:6px 8px;border-radius:8px;font-size:13px">PCB</span>
-                <span style="background:var(--pastel-green);padding:6px 8px;border-radius:8px;font-size:13px">FPGA</span>
-                <span style="background:var(--pastel-yellow);padding:6px 8px;border-radius:8px;font-size:13px">Windows/Mac</span>
-                <span style="background:var(--pastel-blue);padding:6px 8px;border-radius:8px;font-size:13px">Git</span>
-                <span style="background:var(--pastel-purple);padding:6px 8px;border-radius:8px;font-size:13px">Java</span>
+        </article>
+
+        <article class="new-card">
+
+            <img class="new-card-image" src="images/first_semester.jpg" alt="Matrices">
+            <div class="new-card-body">
+                <a href="matrices.html" target="_blank">
+                    <h3>LED Matrix Display</h3>
+                </a>
+                <p>
+                    I used four 8x8 LED matrices and an Arduino to create a display that can show any text inputted
+                </p>
             </div>
-        </div>
 
-    </aside>
-
-    <main class="center" role="main">
+        </article>
         
-        <section aria-labelledby="projects-heading" style="margin-bottom:26px">
-            <h2 id="projects-heading" style="margin:0 0 12px 0;color:#4b2140">Projects</h2>
-            <p style="margin:0 0 18px 0;color:#6b475e">My favorite school and personal projects.</p>
+                
+                
+        <article class="new-card">
 
-            <div class="projects">
-
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/lightstick0.jpeg" alt="Lightstick">
-                        <div class="new-card-body">
-                            <a href="lightstick.html">
-                            <h3>Smart Lightstick (STM32 Nucleo)</h3>
-                            </a>
-                        <p>I utilized C and the STM32 Nucleo Microcontroller to make an interactive lightstick that flashes to the BPM
-                            of your favorite songs. 
-                        <a class="btn" href="files/ECEN_260_Final_Project_Report.pdf" target="_blank">Download Report</a>
-
-                        </p>
-                        </div>
-
-                </article>
-
-
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/hackathon_circuit.jpg" alt="Displays">
-                        <div class="new-card-body">
-                            <a href="hackathons.html">
-                                <h3>Click here to see a dedicated page of all my hackathon projects</h3>
-                            </a>
-                        <p>A collection of projects I've made for hackathons</p>
-                        </div>
-
-                </article>
-
-
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/helloworld0.jpeg" alt="Displays">
-                        <div class="new-card-body">
-                            <a href="displays.html">
-                                <h3>Displays (STM32 Nucleo)</h3>
-                            </a>
-                        <p>I experimented with different displays for the STM32 Nucleo, PCD8544 and LCD1602, and made a few fun text and animation projects with them.
-                        </p>
-                        </div>
-
-                </article>
-
-
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/python.png" alt="Subarray Algorithm">
-                        <div class="new-card-body">
-                            <a href="subarray.html">
-                                <h3>Subarray Algorithm</h3>
-                            </a>
-                        <p>I implemented what is referred to as the sliding window algorithm in Python, which calculates the maximum sum of a subarray of a given size. </p>
-                        </div>
-
-                </article>
-
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/first_semester.jpg" alt="Matrices">
-                        <div class="new-card-body">
-                            <a href="matrices.html" target="_blank">
-                                <h3>LED Matrix Display</h3>
-                            </a>
-                            <p>
-                                I used four 8x8 LED matrices and an Arduino to create a display that can show any text inputted
-                            </p>
-                        </div>
-
-                </article>
-               
-                        
-                        
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/security_crop.jpeg" alt="Security">
-                        <div class="new-card-body">
-                            <a href="security.html" target="_blank">
-                                <h3>Security System (STM32 Nucleo)</h3>
-                            </a>
-                            <p>
-                                I created a simple security system using the STM32 Nucleo that detects door/windows opening and displays
-                            an LED, it also has an arm/disarm system that uses buttons and LEDs.
-                            </p>
-                        </div>
-
-                </article>
-
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/neocities.png" alt="Neocities">
-                        <div class="new-card-body">
-                            <a href="https://leslie-j.neocities.org/" target="_blank">
-                                <h3>Personal Neocities Website</h3>
-                            </a>
-                            <p>
-                                I built my Neocities website to keep as a place to work on my HTML and CSS, it's my first launched HTML website and I like to keep a blog 
-                                on my website as well as pages for my hobbies, favorite music, games, etc.
-                            </p>
-                        </div>
-
-                </article>
-
-                <article class="new-card">
-
-                        <img class="new-card-image" src="images/discrete_love.png" alt="Discrete Love">
-                        <div class="new-card-body">
-                            <a href="https://juryleslie.itch.io/discrete-love" target="_blank">
-                                <h3>Discrete Love: An educational visual novel</h3>
-                            </a>
-                            <p>
-                                I used Python and Ren'py to create an interactive story exploring concepts in discrete mathematics and computer science.
-                            </p>
-                        </div>
-
-                </article>
-
-
+            <img class="new-card-image" src="images/security_crop.jpeg" alt="Security">
+            <div class="new-card-body">
+                <a href="security.html" target="_blank">
+                    <h3>Security System (STM32 Nucleo)</h3>
+                </a>
+                <p>
+                    I created a simple security system using the STM32 Nucleo that detects door/windows opening and displays
+                an LED, it also has an arm/disarm system that uses buttons and LEDs.
+                </p>
             </div>
-        </section>
-        <a class="big-btn" href="right-now.html" download>What I'm up to right now!</a>
 
-<footer class="footer">
-  <p>Leslie Jury 2026 <br> Computer Programming (Embedded Systems Emphasis)</p>
-</footer>
+        </article>
 
-    </main>
+        <article class="new-card">
 
-    <script>
-        /*  Space for programming!
-        */
-    </script>
-</body>
-</html>
+            <img class="new-card-image" src="images/neocities.png" alt="Neocities">
+            <div class="new-card-body">
+                <a href="https://leslie-j.neocities.org/" target="_blank">
+                    <h3>Personal Neocities Website</h3>
+                </a>
+                <p>
+                    I built my Neocities website to keep as a place to work on my HTML and CSS, it's my first launched HTML website and I like to keep a blog 
+                    on my website as well as pages for my hobbies, favorite music, games, etc.
+                </p>
+            </div>
+
+        </article>
+
+        <article class="new-card">
+
+            <img class="new-card-image" src="images/discrete_love.png" alt="Discrete Love">
+            <div class="new-card-body">
+                <a href="https://juryleslie.itch.io/discrete-love" target="_blank">
+                    <h3>Discrete Love: An educational visual novel</h3>
+                </a>
+                <p>
+                    I used Python and Ren'py to create an interactive story exploring concepts in discrete mathematics and computer science.
+                </p>
+            </div>
+
+        </article>
+
+
+    </div>
+</section>
+<a class="big-btn" href="right-now.html">What I'm up to right now!</a>

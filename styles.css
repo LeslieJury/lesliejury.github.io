@@ -324,3 +324,84 @@
   font-size: 16px;
   line-height: 1.5;
 }
+
+
+
+
+/* --- About Page Styles --- */
+
+.about-wrapper {
+    margin-bottom: 26px;
+}
+
+.section-title {
+    color: #4b2140;
+}
+
+.about-title {
+    margin: 0 0 12px 0;
+}
+
+.info-section {
+    margin-bottom: 26px;
+}
+
+.bio-text {
+    margin: 8px 0 12px 0;
+    color: #5a4558;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.location-details {
+    margin-top: 16px;
+    color: #6b4b67;
+}
+
+/* --- Experience & Education Styles --- */
+
+.experience-grid {
+    margin-top: 12px;
+    display: grid;
+    gap: 12px;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    color: #634358;
+}
+
+.card-description {
+    margin-top: 8px;
+    color: #583a50;
+}
+
+
+.content-image {
+    width: 100%;       /* Tells the image to fill the space it's given... */
+    max-width: 600px;  /* ...but NEVER grow larger than 600px wide */
+    height: auto;      /* Keeps the picture from stretching or distorting */
+    display: block;    /* Allows us to center the image on the page */
+    margin: 24px auto; /* Adds space top/bottom, and centers it left/right */
+    border-radius: 8px;/* Optional: Gives it nice, soft corners to match your experience cards */
+}
+
+
+
+body {
+    color: #2D1637; /* Option 1: A deep, rich eggplant purple (My top recommendation for readability) */
+}

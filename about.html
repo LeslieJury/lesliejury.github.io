@@ -1,99 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Leslie Jury: About</title>
+---
+layout: default
+title: About
+---
 
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+<section aria-labelledby="about-heading" class="about-wrapper">
+    <h2 id="about-heading" class="section-title about-title">About Me</h2>
 
-    -->
-</head>
-<body>
-    <header class="top-banner" role="banner">
-        <div class="name">
-            <div class="monogram" aria-hidden="true">LJ</div>
-            <div>
-                <div style="font-size:18px">Leslie Jury</div>
-                <div style="font-size:12px;opacity:0.95">Computer Programming • Embedded Systems</div>
-            </div>
-        </div>
-    </header>
-
-    <nav class="left-sidebar" aria-label="Primary navigation">
-        <!-- Edit these links to point to your pages: about.html, contact.html, projects.html, hobbies.html -->
-        <a class="nav-btn" href="index.html" title="Home">
-            <span style="font-size:18px">🏠</span>
-            <span style="font-size:10px">Home</span>
-        </a>
-        <a class="nav-btn" href="about.html" title="About">
-            <span style="font-size:18px">👋</span>
-            <span style="font-size:10px">About</span>
-        </a>
-        <a class="nav-btn" href="projects.html" title="Projects">
-            <span style="font-size:18px">💻</span>
-            <span style="font-size:10px">Projects</span>
-        </a>
-        <a class="nav-btn" href="contact.html" title="Contact">
-            <span style="font-size:18px">✉️</span>
-            <span style="font-size:10px">Contact</span>
-        </a>
-        <a class="nav-btn" href="skills.html" title="Skills">
-            <span style="font-size:18px">🎲</span>
-            <span style="font-size:10px">Skills</span>
-        </a>
-
-    </nav>
-
-    <aside class="right-panel" aria-label="Profile and quick links">
-        <div class="profile">
-            <img class="profile-picture" src="images/profile.jpg" alt="Leslie Jury profile photo" />
-            <div>
-                <div class="title">Leslie Jury</div>
-                <div class="subtitle">Computer Programming (Embedded Systems)</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div style="font-weight:700;margin-bottom:8px">Contact & Resume</div>
-            <div class="links">
-                <a class="btn" href="files/leslie_jury_resume_2026.pdf" download>⬇︎ Download Resume</a>
-                <a class="btn secondary" href="https://www.linkedin.com/in/lesliejury" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-            <div style="margin-top:10px;font-size:13px;color:#e54ec4">Email: <a href="mailto:lesliejury3@gmail.com">lesliejury3@gmail.com</a></div>
-        </div>
-
-        <div class="card">
-            <div style="font-weight:700;margin-bottom:8px">Basic Info</div>
-            <div style="font-size:14px; line-height:1.45">
-                Computer Programmer with an emphasis in embedded systems. Interested in firmware, hardware-software integration, PCB design, and full-stack creative projects.
-            </div>
-        </div>
-
-        <div class="card">
-            <div style="font-weight:700;margin-bottom:8px">Skills (short)</div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-                <span style="background:var(--pastel-green);padding:6px 8px;border-radius:8px;font-size:13px">C/C++/C#</span>
-                <span style="background:var(--pastel-yellow);padding:6px 8px;border-radius:8px;font-size:13px">Python</span>
-                <span style="background:var(--pastel-blue);padding:6px 8px;border-radius:8px;font-size:13px">Linux</span>
-                <span style="background:var(--pastel-purple);padding:6px 8px;border-radius:8px;font-size:13px">PCB</span>
-                <span style="background:var(--pastel-green);padding:6px 8px;border-radius:8px;font-size:13px">FPGA</span>
-                <span style="background:var(--pastel-yellow);padding:6px 8px;border-radius:8px;font-size:13px">Windows/Mac</span>
-                <span style="background:var(--pastel-blue);padding:6px 8px;border-radius:8px;font-size:13px">Git</span>
-                <span style="background:var(--pastel-purple);padding:6px 8px;border-radius:8px;font-size:13px">Java</span>
-            </div>
-        </div>
-
-    </aside>
-
-    <main class="center" role="main">
-        <section aria-labelledby="about-heading" style="margin-bottom:26px">
-            <h2 id="about-heading" style="margin:0 0 12px 0;color:#4b2140">About Me</h2>
-
-
-        <section aria-labelledby="info-heading" class="info-section" style="margin-bottom:26px">
+    <section aria-labelledby="info-heading" class="info-section">
         <div class="profile">
             <img class="profile-picture-big" src="images/profile.jpg" alt="Leslie Jury profile photo (big)" />
             <div>
@@ -101,65 +14,54 @@
                 <div class="subtitle">Computer Programming (Embedded Systems)</div>
             </div>
         </div>
-            <p style="margin:8px 0 12px 0;color:#5a4558">I'm a programmer originating from Longmont, CO. I'm currently in school at BYU-Idaho, 
+        
+        <p class="bio-text">
+            I'm a programmer originating from Longmont, CO. I'm currently in school at BYU-Idaho, 
             but I plan on graduating soon with my Associates of Applied Sciences in Computer Programming with an emphasis in embedded systems.
             I'm currently planning on starting to work in early 2027, I'm open to relocating, but my current goal is Denver, CO. Eventually I'll finish my Bachelor's in Computer Engineering
             most likely at MSU Denver.
             <br>I'm currently looking out for entry-level roles that I can start in the coming year. I'm open to both hardware and software engineering
-            and I would love to get more experience in the industry before I finish my Bachelor's degree.</p>
+            and I would love to get more experience in the industry before I finish my Bachelor's degree.
+        </p>
 
-            <div style="display:flex;gap:12px;flex-wrap:wrap">
-                <a class="btn" href="files/leslie_jury_resume_2026.pdf" download>⬇︎ Download Resume</a>
-                <a class="btn secondary" href="projects.html">View All Projects</a>
-                <a class="btn" href="contact.html">Contact Me</a>
-            </div>
+        <div class="action-buttons">
+            <a class="btn" href="files/leslie_jury_resume_2026.pdf" download>⬇︎ Download Resume</a>
+            <a class="btn secondary" href="projects.html">View All Projects</a>
+            <a class="btn" href="contact.html">Contact Me</a>
+        </div>
 
-            <div style="margin-top:16px;color:#6b4b67">
-                <strong>Location:</strong> Longmont, CO • <strong>Open to:</strong> internships and entry-level roles
-            </div>
-        </section>
+        <div class="location-details">
+            <strong>Location:</strong> Longmont, CO • <strong>Open to:</strong> internships and entry-level roles
+        </div>
+    </section>
+</section>
 
-                <section aria-labelledby="experience-heading">
-            <h2 id="experience-heading" style="color:#4b2140">Experience & Education</h2>
-            <div style="margin-top:12px;display:grid;gap:12px">
+<section aria-labelledby="experience-heading">
+    <h2 id="experience-heading" class="section-title">Experience & Education</h2>
+    
+    <div class="experience-grid">
+        <div class="experience-card">
+            <div class="card-title">A.A.S. Computer Programming (Embedded Systems Emphasis)</div>
+            <div class="card-subtitle">Brigham Young University - Idaho • Expected Graduation: Winter 2027</div>
+            <div class="card-description">Relevant coursework: ECEN 240: Fundamentals of Digital Systems, ECEN 260: Microprocessor Based-System Design, ECEN 250: Electric Circuit Analysis 2</div>
+        </div>
 
-                <div style="background:rgba(255,255,255,0.6);padding:12px;border-radius:10px">
-                    <div style="font-weight:700">A.A.S. Computer Programming (Embedded Systems Emphasis)</div>
-                    <div style="font-size:13px;color:#634358">Brigham Young University - Idaho • Expected Graduation: Winter 2027</div>
-                    <div style="margin-top:8px;color:#583a50">Relevant coursework: ECEN 240: Fundamentals of Digital Systems, ECEN 260: Microprocessor Based-System Design, ECEN 250: Electric Circuit Analysis 2</div>
-                </div>
+        <div class="experience-card">
+            <div class="card-title">IT Specialist - Classroom Technology</div>
+            <div class="card-subtitle">Brigham Young University - Idaho • January 2023 – January 2024</div>
+            <div class="card-description">In Classroom Technology, I received tickets from teachers and students about problems concerning their computers, projectors, internet, etc.</div>
+        </div>
 
-                <div style="background:rgba(255,255,255,0.6);padding:12px;border-radius:10px">
-                    <div style="font-weight:700">IT Specialist - Classroom Technology</div>
-                    <div style="font-size:13px;color:#634358">Brigham Young University - Idaho • January 2023 – January 2024</div>
-                    <div style="margin-top:8px;color:#583a50">In Classroom Technology, I received tickets from teachers and students about problems concerning their computers, projectors, internet, etc.</div>
-                </div>
+        <div class="experience-card">
+            <div class="card-title">Junior IoT Engineer - Robauto Inc.</div>
+            <div class="card-subtitle">Robauto Inc. • June 2021 – August 2021</div>
+            <div class="card-description">In High School, over the summer of 2021 I had the opportunity to take part in an internship through my High School
+                where I worked as a junior engineer for this startup company from Longmont, CO, Robauto Inc. I got experience in a lot of IoT device development,
+                PCB design, PCB assembly, and creating my own projects, as well as contributing to bigger projects.
+            </div> 
+        </div>
+    </div>
+</section>
 
-                <div style="background:rgba(255,255,255,0.6);padding:12px;border-radius:10px">
-                    <div style="font-weight:700">Junior IoT Engineer - Robauto Inc.</div>
-                    <div style="font-size:13px;color:#634358">Robauto Inc. • June 2021 – August 2021</div>
-                    <div style="margin-top:8px;color:#583a50">In High School, over the summer of 2021 I had the opportunity to take part in an internship through my High School
-                        where I worked as a junior engineer for this startup company from Longmont, CO, Robauto Inc. I got experience in a lot of IoT device development,
-                        PCB design, PCB assembly, and creating my own projects, as well as contributing to bigger projects.</div> 
-                    </div>
-                </div>
-
-
-
-            </div>
-        </section>
-        <a class="big-btn" href="timeline.html" download>My Timeline!</a>
-<footer class="footer">
-  <p>Leslie Jury 2026 <br> Computer Programming (Embedded Systems Emphasis)</p>
-</footer>
-        
-        <div style="height:60vh"></div> <!-- room to scroll and expand -->
-    </main>
-
-    <script>
-        /* Placeholder: add small JS here if you want hamburger menus or dynamic content.
-             Example: detect missing resume and hide download button, or load projects via JSON.
-        */
-    </script>
-</body>
-</html>
+<br>
+<a class="big-btn" href="timeline.html">My Timeline!</a>
