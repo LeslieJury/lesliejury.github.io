@@ -3,18 +3,38 @@
 <footer class="footer">
   <p>Leslie Jury 2026 <br> Computer Programming (Embedded Systems Emphasis)</p>
 </footer>
-        <div style="height:60vh"></div> <!-- room to scroll and expand -->
+        <div style="height:60vh"></div> 
 
         
     </main>
 
+// JavaScript for theme toggle and other interactive features: currently working on it! Will be added to all pages once ready.
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const rootElement = document.documentElement;
 
-    <!-- Small script area for easy future customization (e.g., mobile nav) -->
-    <script>
-        /* Placeholder: add small JS here if you want hamburger menus or dynamic content.
-             Example: detect missing resume and hide download button, or load projects via JSON.
-        */
-    </script>
+
+    if (themeToggleBtn) {
+      if (rootElement.classList.contains('matrix-mode')) {
+        themeToggleBtn.innerText = 'Return to Clean Mode';
+      } else {
+        themeToggleBtn.innerText = 'Enter the Matrix';
+      }
+
+      themeToggleBtn.addEventListener('click', () => {
+        rootElement.classList.toggle('matrix-mode');
+        
+        if (rootElement.classList.contains('matrix-mode')) {
+          localStorage.setItem('portfolio-theme', 'matrix');
+          themeToggleBtn.innerText = 'Return to Clean Mode';
+        } else {
+          localStorage.setItem('portfolio-theme', 'clean');
+          themeToggleBtn.innerText = 'Enter the Matrix';
+        }
+      });
+    }
+  </script>
+</body>
 </body>
 </html></div></section>
 
