@@ -13,7 +13,7 @@
     --radius: 12px;
     --gap: 18px;
     --text-color:#2D1637;
-    --card-color:  #b0849873;
+    --card-color:  var(--grey-color);
     --grey-color: #ffffffd2;
 
 }
@@ -302,10 +302,14 @@ article .new-card-body {
 
 .hero-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
+  background: var(--grey-color);
+  padding: 12px;
+  border-radius: 10px;
+
 }
 
 .hero-image img {
