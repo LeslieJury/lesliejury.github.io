@@ -135,7 +135,45 @@ aside.right-panel{
     background:linear-gradient(180deg,var(--pastel-purple),var(--pastel-blue));
     display:grid;place-items:center;color:#6b2b59;font-weight:700;font-size:18px;
 }
-.title{font-weight:700;font-size:18px;color:var(--text-color)}
+
+/* 1. Add this to your existing .card-title class (if it's not already there) */
+#glitch-leslie  {
+    /* ... your existing styles (font-size, color, etc.) ... */
+    font-weight:700;
+    color:var(--text-color);
+    margin-bottom: 10px;
+    font-size: 32px;
+    transition: text-shadow 0.1s ease;
+    width: 210px;
+    white-space: nowrap;
+}
+
+/* 2. Trigger the animation on hover */
+#glitch-leslie:hover {
+    /* Runs the keyframe animation infinitely while hovered */
+    animation: text-glitch 0.2s infinite linear alternate-reverse;
+}
+
+/* 3. The Keyframe Animation */
+@keyframes text-glitch {
+    0% {
+        text-shadow: 2px 1px 0px #ff00c1, -2px -1px 0px #00fff9;
+    }
+    25% {
+        text-shadow: -2px -2px 0px #ff00c1, 2px 2px 0px #00fff9;
+    }
+    50% {
+        text-shadow: 2px -1px 0px #ff00c1, -2px 1px 0px #00fff9;
+    }
+    75% {
+        text-shadow: -1px 2px 0px #ff00c1, 1px -2px 0px #00fff9;
+    }
+    100% {
+        text-shadow: 1px -1px 0px #ff00c1, -1px 1px 0px #00fff9;
+    }
+}
+
+
 .subtitle{font-size:13px;color:var(--text-color);margin-top:6px}
 
 .right-panel .card{ background:var(--grey-color);
@@ -302,25 +340,20 @@ article .new-card-body {
 
 .hero-container {
   display: flex;
-  align-items: left;
+  align-items: center;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
   background: var(--grey-color);
   padding: 12px;
   border-radius: 10px;
-
 }
 
 .hero-image img {
   width: 200px;
   height: auto;
   border-radius: 10px;
-}
 
-.hero-text h1 {
-  margin-bottom: 10px;
-  font-size: 32px;
 }
 
 .hero-text p {
@@ -362,7 +395,7 @@ article .new-card-body {
     color: var(--text-color);
 }
 
-/* --- Experience & Education Styles --- */
+/* Experience & Education Styles */
 
 .experience-grid {
     margin-top: 12px;
@@ -378,105 +411,30 @@ article .new-card-body {
 
 
 .content-image {
-    width: 100%;       /* Tells the image to fill the space it's given... */
-    max-width: 600px;  /* ...but NEVER grow larger than 600px wide */
-    height: auto;      /* Keeps the picture from stretching or distorting */
-    display: block;    /* Allows us to center the image on the page */
-    margin: 24px auto; /* Adds space top/bottom, and centers it left/right */
-    border-radius: 8px;/* Optional: Gives it nice, soft corners to match your experience cards */
+    width: 100%;      
+    max-width: 600px; 
+    height: auto;   
+    display: block;  
+    margin: 24px auto;
+    border-radius: 8px;
 }
 
 
+/* Selection */
 ::selection {
-  background-color: #FFB6C1; /* Light Pink */
-  color: #FFFFFF; /* White */
+  background-color: var(--accent); 
+  color: #FFFFFF; 
 }
 
 ::-moz-selection {
-  background-color: #FFB6C1;
+  background-color: var(--accent);
   color: #FFFFFF;
 }   
 
-/* 1. Setup the dark background and base font */
-.glitch-container {
-  background-color: var(--bg-color); /* Uses your theme variable! */
-  padding: 15px 30px; /* Drastically reduced the top/bottom and left/right padding */
-  text-align: center;
-  
-  /* The magic properties to make it smaller: */
-  width: fit-content; /* Forces the box to shrink-wrap around the text */
-  margin: 0 auto; /* Keeps the now-smaller box perfectly centered on the page */
-  
-  /* Optional: Give it that Y2K terminal vibe */
-  border: 2px solid var(--terminal-border); 
-  border-radius: 4px; 
-}
 
-.glitch {
-  position: relative;
-  font-size: 4rem;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace; /* Classic Matrix code font */
-  color: #FF1493; /* Deep Hot Pink */
-  text-shadow: 0 0 10px rgba(255, 20, 147, 0.6); /* Soft pink neon glow */
-  display: inline-block;
-  cursor: pointer;
-}
 
-/* 2. Create the two hidden clones */
-.glitch::before,
-.glitch::after {
-  content: attr(data-text); /* Pulls the text from the HTML attribute */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--bg-color); /* Must match the container's background color! */
-  opacity: 0; /* Hidden by default */
-}
 
-/* 3. Style the left shift (Cyan offset) */
-.glitch::before {
-  left: 3px;
-  text-shadow: -2px 0 #00FFFF; /* Cyan chromatic aberration */
-  animation: glitch-anim-1 2s infinite linear alternate-reverse;
-}
-
-/* 4. Style the right shift (Bright Pink offset) */
-.glitch::after {
-  left: -3px;
-  text-shadow: 2px 0 #FF69B4; /* Lighter hot pink */
-  animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
-}
-
-/* 5. Trigger the glitch ONLY on hover */
-.glitch:hover::before,
-.glitch:hover::after {
-  opacity: 1;
-}
-
-/* 6. The Animation Keyframes (Slicing the text) */
-/* We use clip-path to randomly show only tiny horizontal slices of the clones */
-@keyframes glitch-anim-1 {
-  0% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, 1px); }
-  20% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -1px); }
-  40% { clip-path: inset(30% 0 20% 0); transform: translate(-2px, 2px); }
-  60% { clip-path: inset(15% 0 80% 0); transform: translate(2px, -2px); }
-  80% { clip-path: inset(55% 0 10% 0); transform: translate(-1px, 1px); }
-  100% { clip-path: inset(40% 0 30% 0); transform: translate(1px, -1px); }
-}
-
-@keyframes glitch-anim-2 {
-  0% { clip-path: inset(25% 0 45% 0); transform: translate(2px, -1px); }
-  20% { clip-path: inset(60% 0 15% 0); transform: translate(-2px, 1px); }
-  40% { clip-path: inset(10% 0 70% 0); transform: translate(2px, -2px); }
-  60% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 2px); }
-  80% { clip-path: inset(35% 0 40% 0); transform: translate(1px, -1px); }
-  100% { clip-path: inset(5% 0 80% 0); transform: translate(-1px, 1px); }
-}
-
-/* 1. Force the canvas into the background and fix the weird spacing */
+/* Matrix*/
 #matrix-canvas {
   position: fixed !important;
   top: 0;
@@ -492,12 +450,10 @@ article .new-card-body {
   display: block;
 }
 
-/* 2. Reveal it when the button is clicked */
 :root.matrix-mode #matrix-canvas {
   opacity: 1;
 }
 
-/* 3. Ensure your main site backgrounds don't hide the rain */
 :root.matrix-mode body,
 :root.matrix-mode main,
 :root.matrix-mode .wrapper,
@@ -513,3 +469,4 @@ article .new-card-body {
 :root.matrix-mode #matrix-canvas {
   opacity: 1;
 }
+
