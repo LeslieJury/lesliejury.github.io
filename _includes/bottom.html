@@ -8,33 +8,109 @@
         
     </main>
 
-// JavaScript for theme toggle and other interactive features: currently working on it! Will be added to all pages once ready.
-<script>
+  <script>
+  // ==========================================
+  // 1. CANVAS SETUP & DRAWING LOGIC
+  // ==========================================
+  const canvas = document.getElementById('matrix-canvas');
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const matrixChars = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレゲゼデベペオォコソトノホモヨョロゴゾドボポヴッン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const charArray = matrixChars.split('');
+  const fontSize = 16;
+  
+  let columns = canvas.width / fontSize;
+  let drops = [];
+  for (let x = 0; x < columns; x++) { drops[x] = 1; }
+
+  function drawMatrix() {
+    ctx.fillStyle = 'rgba(17, 17, 17, 0.05)'; 
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#FF1493'; 
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = charArray[Math.floor(Math.random() * charArray.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  // Handle resizing
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    columns = canvas.width / fontSize;
+    drops = [];
+    for (let x = 0; x < columns; x++) { drops[x] = 1; }
+  });
+
+  // ==========================================
+  // 2. ANIMATION CONTROL (The CPU Saver)
+  // ==========================================
+  let matrixInterval = null; // Variable to hold our animation loop
+
+  function startMatrix() {
+    if (!matrixInterval) {
+      matrixInterval = setInterval(drawMatrix, 35);
+    }
+  }
+
+  function stopMatrix() {
+    if (matrixInterval) {
+      clearInterval(matrixInterval); // Kills the animation loop entirely
+      matrixInterval = null;
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Wipes the canvas clean
+    }
+  }
+// ==========================================
+  // 3. THEME TOGGLE INTEGRATION (Bulletproof Version)
+  // ==========================================
+  
+  // Wait for the entire page to load before trying to attach the button
+  document.addEventListener('DOMContentLoaded', () => {
+    
     const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeTextSpan = document.getElementById('theme-text');
     const rootElement = document.documentElement;
 
-
-    if (themeToggleBtn) {
+    if (themeToggleBtn && themeTextSpan) {
+      // 1. Check initial state on page load
       if (rootElement.classList.contains('matrix-mode')) {
-        themeToggleBtn.innerText = 'Return to Clean Mode';
+        themeTextSpan.innerText = 'Clean'; 
+        startMatrix(); 
       } else {
-        themeToggleBtn.innerText = 'Enter the Matrix';
+        themeTextSpan.innerText = 'Matrix';
       }
 
-      themeToggleBtn.addEventListener('click', () => {
+      // 2. Handle button clicks
+      themeToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Stops the <a> tag from jumping the page around
+        
         rootElement.classList.toggle('matrix-mode');
         
         if (rootElement.classList.contains('matrix-mode')) {
           localStorage.setItem('portfolio-theme', 'matrix');
-          themeToggleBtn.innerText = 'Return to Clean Mode';
+          themeTextSpan.innerText = 'Clean'; 
+          startMatrix(); 
         } else {
           localStorage.setItem('portfolio-theme', 'clean');
-          themeToggleBtn.innerText = 'Enter the Matrix';
+          themeTextSpan.innerText = 'Matrix'; 
+          stopMatrix(); 
         }
       });
+    } else {
+      console.error("Matrix Error: Could not find the button or text span IDs!");
     }
-  </script>
-</body>
+  });
+</script>
 </body>
 </html></div></section>
 
