@@ -173,7 +173,7 @@ aside.right-panel{
     }
 }
 
-
+.title{font-size:18px;color:var(--text-color);font-weight:700;margin-bottom:10px}
 .subtitle{font-size:13px;color:var(--text-color);margin-top:6px}
 
 .right-panel .card{ background:var(--grey-color);
