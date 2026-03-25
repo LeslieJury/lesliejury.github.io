@@ -3,7 +3,7 @@
     --banner-height: 72px; /* height of the top banner */
     --left-width: 84px;       /* thinnest sidebar */
     --right-width: 300px;     /* basic info panel */
-    --bg-color: #fe9cc8;       /* main pink */
+    --bg-color: #ffa7cf;       /* main pink */
     --pastel-purple: #f6d9ff;
     --pastel-yellow: #fff3b0;
     --pastel-blue: #a6f3faa9;
@@ -13,8 +13,8 @@
     --radius: 12px;
     --gap: 18px;
     --text-color:#2D1637;
-    --card-color:  #a6f3faa9;
-    --grey-color: #e8e8e8a8;
+    --card-color:  #b0849873;
+    --grey-color: #ffffffd2;
 
 }
 
@@ -22,7 +22,7 @@
   --text-color: #f4f4f4;
   --accent: #FF1493; /* Hot Pink */
   --terminal-border: #FF1493;
-  --card-color: #11cdee; /* Bright Cyan */
+  --card-color: #ff65ab; /* Bright Cyan */
   --grey-color: #333;
 
   /* Strip away all background colors from common Jekyll layout containers in Matrix Mode */
@@ -121,7 +121,7 @@ aside.right-panel{
     bottom:0;
     padding:22px;
     overflow:auto;
-    background: linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.4));
+    background: linear-gradient(90deg,rgba(255,255,255,0.6), rgba(255,255,255,0.4)) ;
     border-left:1px solid rgba(255,255,255,0.08);
     z-index:30;
     backdrop-filter: blur(6px);
@@ -138,7 +138,7 @@ aside.right-panel{
 .title{font-weight:700;font-size:18px;color:var(--text-color)}
 .subtitle{font-size:13px;color:var(--text-color);margin-top:6px}
 
-.right-panel .card{ background:linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
+.right-panel .card{ background:var(--grey-color);
     padding:12px;border-radius:10px;margin-bottom:12px; box-shadow: 0 4px 14px rgba(6,6,6,0.03);
 }
 .links{display:flex;gap:8px;flex-wrap:wrap;}
@@ -194,7 +194,7 @@ article .new-card-body {
 .info-section{ background:linear-gradient(180deg,rgba(255,255,255,0.6), rgba(255,255,255,0.4)); padding:18px; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.04) }
 
 /* Footer-ish small */
-.muted{ color:#6d5166; font-size:13px }
+.muted{ color:var(--text-color); font-size:13px }
 
 /* Responsive tweaks */
 @media (max-width:900px){
@@ -205,7 +205,7 @@ article .new-card-body {
 @media (max-width:720px){
     /* stack: hide right panel for small screens, left becomes top row */
     aside.right-panel{ display:none }
-    nav.left-sidebar{ position:fixed; top:var(--banner-height); left:8px; width:calc(100% - 16px); height:54px; display:flex; flex-direction:row; align-items:center; gap:10px; padding:8px; border-radius:10px; background:linear-gradient(90deg,rgba(255,255,255,0.6), rgba(255,255,255,0.2)) }
+    nav.left-sidebar{ position:fixed; top:var(--banner-height); left:8px; width:calc(100% - 16px); height:54px; display:flex; flex-direction:row; align-items:center; gap:10px; padding:8px; border-radius:10px; background:linear-gradient(90deg,rgba(255,255,255,0.7), rgba(255,255,255,0.4)) }
     nav.left-sidebar a.nav-btn{ width:auto;height:40px;padding:0 12px;border-radius:10px; font-size:13px; }
     main.center{ margin-left:0; margin-right:0; padding-top:20px; margin-top: calc(var(--banner-height) + 64px) }
 }
@@ -331,7 +331,7 @@ article .new-card-body {
 }
 
 .section-title {
-    color: #4b2140;
+    color: var(--text-color);
 }
 
 .about-title {
@@ -344,7 +344,7 @@ article .new-card-body {
 
 .bio-text {
     margin: 8px 0 12px 0;
-    color: #5a4558;
+    color: var(--text-color);
 }
 
 .action-buttons {
@@ -355,7 +355,7 @@ article .new-card-body {
 
 .location-details {
     margin-top: 16px;
-    color: #6b4b67;
+    color: var(--text-color);
 }
 
 /* --- Experience & Education Styles --- */
@@ -366,7 +366,7 @@ article .new-card-body {
     gap: 12px;
 }
 
-.experience-card {
+.my-card {
     background: var(--grey-color);
     padding: 12px;
     border-radius: 10px;
