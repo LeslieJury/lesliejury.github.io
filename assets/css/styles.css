@@ -1,0 +1,472 @@
+
+:root{
+
+    --banner-height: 72px; /* height of the top banner */
+    --left-width: 84px;       /* thinnest sidebar */
+    --right-width: 300px;     /* basic info panel */
+    --bg-color: #ffa7cf;       /* main pink */
+    --pastel-purple: #f6d9ff;
+    --pastel-yellow: #fff3b0;
+    --pastel-blue: #a6f3faa9;
+    --pastel-green: #adf9ad;
+    --accent: #ff65ab;
+    --muted: #4b4b4b;
+    --radius: 12px;
+    --gap: 18px;
+    --text-color:#2D1637;
+    --card-color:  var(--grey-color);
+    --grey-color: #ffffffd2;
+
+}
+
+:root.matrix-mode {
+  --text-color: #f4f4f4;
+  --accent: #FF1493; /* Hot Pink */
+  --terminal-border: #FF1493;
+  --card-color: #ff65ab; /* Bright Cyan */
+  --grey-color: #333;
+
+  /* Strip away all background colors from common Jekyll layout containers in Matrix Mode */
+:root.matrix-mode body,
+:root.matrix-mode main,
+:root.matrix-mode .wrapper,
+:root.matrix-mode .page-content,
+:root.matrix-mode .container {
+  background-color: transparent;
+}
+}
+as
+/* Apply the variables to your elements */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+h1, a , h2, h3, h4, h5, p {
+  color: var(--text-color);
+}
+
+.terminal-window {
+  border: 2px solid var(--terminal-border);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--muted); background:var(--bg-color);}
+a{color:inherit; text-decoration:none}
+button{font:inherit}
+
+/* Top banner */
+header.top-banner{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:var(--banner-height);
+    background:var(--accent);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:40;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color:white;
+    font-weight:700;
+    letter-spacing:0.6px;
+}
+header .name {
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+header .monogram{
+    background:rgba(255,255,255,0.18);
+    width:44px;height:44px;border-radius:10px;
+    display:inline-grid;place-items:center;font-weight:700;
+}
+
+/* Left sidebar */
+nav.left-sidebar{
+    position:fixed;
+    top:var(--banner-height);
+    left:0;
+    width:var(--left-width);
+    bottom:0;
+    padding:16px 6px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:center;
+    background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    z-index:30;
+    border-right:1px solid rgba(255,255,255,0.08);
+}
+nav a.nav-btn{
+    width:56px;height:56px;border-radius:12px;
+    display:inline-flex;align-items:center;justify-content:center;
+    background:transparent;color:var(--text-color);font-weight:600;
+    transition:transform .15s, background .15s;
+    font-size:12px;
+    text-align:center;
+    flex-direction:column;
+    gap:6px;
+}
+nav a.nav-btn:hover{ transform:translateY(-3px); background:rgba(255,255,255,0.12) }
+
+/* Right panel */
+aside.right-panel{
+    position:fixed;
+    top:var(--banner-height);
+    right:0;
+    width:var(--right-width);
+    bottom:0;
+    padding:22px;
+    overflow:auto;
+    background: linear-gradient(90deg,rgba(255,255,255,0.6), rgba(255,255,255,0.4)) ;
+    border-left:1px solid rgba(255,255,255,0.08);
+    z-index:30;
+    backdrop-filter: blur(6px);
+}
+.profile {
+    display:flex; gap:12px; align-items:center;
+    margin-bottom:16px;
+}
+.avatar{
+    width:72px;height:72px;border-radius:14px;flex-shrink:0;
+    background:linear-gradient(180deg,var(--pastel-purple),var(--pastel-blue));
+    display:grid;place-items:center;color:#6b2b59;font-weight:700;font-size:18px;
+}
+
+/* 1. Add this to your existing .card-title class (if it's not already there) */
+#glitch-leslie  {
+    /* ... your existing styles (font-size, color, etc.) ... */
+    font-weight:700;
+    color:var(--text-color);
+    margin-bottom: 10px;
+    font-size: 32px;
+    transition: text-shadow 0.1s ease;
+    width: 210px;
+    white-space: nowrap;
+}
+
+/* 2. Trigger the animation on hover */
+#glitch-leslie:hover {
+    /* Runs the keyframe animation infinitely while hovered */
+    animation: text-glitch 0.2s infinite linear alternate-reverse;
+}
+
+/* 3. The Keyframe Animation */
+@keyframes text-glitch {
+    0% {
+        text-shadow: 2px 1px 0px #ff00c1, -2px -1px 0px #00fff9;
+    }
+    25% {
+        text-shadow: -2px -2px 0px #ff00c1, 2px 2px 0px #00fff9;
+    }
+    50% {
+        text-shadow: 2px -1px 0px #ff00c1, -2px 1px 0px #00fff9;
+    }
+    75% {
+        text-shadow: -1px 2px 0px #ff00c1, 1px -2px 0px #00fff9;
+    }
+    100% {
+        text-shadow: 1px -1px 0px #ff00c1, -1px 1px 0px #00fff9;
+    }
+}
+
+.title{font-size:18px;color:var(--text-color);font-weight:700;margin-bottom:10px}
+.subtitle{font-size:13px;color:var(--text-color);margin-top:6px}
+
+.right-panel .card{ background:var(--grey-color);
+    padding:12px;border-radius:10px;margin-bottom:12px; box-shadow: 0 4px 14px rgba(6,6,6,0.03);
+}
+.links{display:flex;gap:8px;flex-wrap:wrap;}
+.btn{
+    display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;
+    background:var(--pastel-yellow); color:#2b2b2b; font-weight:600; font-size:13px;
+    border: none; cursor:pointer;
+}
+.btn.secondary{ background:var(--pastel-blue) }
+
+/* Center content (scrolls) */
+main.center{
+    /* leave room for fixed header + sidebars */
+    margin-top:var(--banner-height);
+    margin-left:var(--left-width);
+    margin-right:var(--right-width);
+    padding:24px 28px;
+    min-height:calc(100vh - var(--banner-height));
+}
+
+/* Project gallery */
+.projects{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap:18px;
+    margin-bottom:28px;
+}
+.new-card{
+    border-radius: 14px;
+    overflow: hidden;
+    background:var(--card-color);
+    display: grid;
+    grid-template-rows: 160fr 240fr;
+    height: 400px;
+}
+.new-card-image {
+    grid-template-rows: 1/2;
+    height: 150px;
+    width: 100%;
+    object-fit: cover
+}
+article .new-card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.new-card-body a,.new-card-body p,.new-card-body h3{
+    margin: 0;
+}
+
+/* Basic info section */
+.info-section{ background:linear-gradient(180deg,rgba(255,255,255,0.6), rgba(255,255,255,0.4)); padding:18px; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.04) }
+
+/* Footer-ish small */
+.muted{ color:var(--text-color); font-size:13px }
+
+/* Responsive tweaks */
+@media (max-width:900px){
+    :root{ --right-width:220px }
+    nav.left-sidebar{ width:64px }
+    main.center{ padding:18px }
+}
+@media (max-width:720px){
+    /* stack: hide right panel for small screens, left becomes top row */
+    aside.right-panel{ display:none }
+    nav.left-sidebar{ position:fixed; top:var(--banner-height); left:8px; width:calc(100% - 16px); height:54px; display:flex; flex-direction:row; align-items:center; gap:10px; padding:8px; border-radius:10px; background:linear-gradient(90deg,rgba(255,255,255,0.7), rgba(255,255,255,0.4)) }
+    nav.left-sidebar a.nav-btn{ width:auto;height:40px;padding:0 12px;border-radius:10px; font-size:13px; }
+    main.center{ margin-left:0; margin-right:0; padding-top:20px; margin-top: calc(var(--banner-height) + 64px) }
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border: 3px solid var(--accent);
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+@media (max-width: 700px) {
+    .contact-section {
+        padding: 18px 8px 18px 8px;
+        max-width: 98vw;
+    }
+}
+
+.big-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 44px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    border-radius: 16px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    box-shadow: 0 6px 24px rgba(255, 122, 182, 0.13);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    margin: 12px 0;
+}
+
+.big-btn:hover, .big-btn:focus {
+    background: linear-gradient(90deg, #ff9fcf, var(--accent) 80%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 10px 32px rgba(255, 122, 182, 0.18);
+    outline: none;
+}
+.profile-picture {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0;
+}
+.profile-picture-big {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0;
+}
+
+#galaxy-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: radial-gradient(circle at center, #1a1a2e, #0f0f1a);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#galaxy {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+  color: inherit; /* uses your existing text color */
+  border-top: 1px solid var(--accent); /* subtle divider */
+}
+
+.hero {
+  padding: 40px 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--grey-color);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.hero-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+
+}
+
+.hero-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* --- About Page Styles --- */
+
+.about-wrapper {
+    margin-bottom: 26px;
+}
+
+.section-title {
+    color: var(--text-color);
+}
+
+.about-title {
+    margin: 0 0 12px 0;
+}
+
+.info-section {
+    margin-bottom: 26px;
+}
+
+.bio-text {
+    margin: 8px 0 12px 0;
+    color: var(--text-color);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.location-details {
+    margin-top: 16px;
+    color: var(--text-color);
+}
+
+/* Experience & Education Styles */
+
+.experience-grid {
+    margin-top: 12px;
+    display: grid;
+    gap: 12px;
+}
+
+.my-card {
+    background: var(--grey-color);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+
+.content-image {
+    width: 100%;      
+    max-width: 600px; 
+    height: auto;   
+    display: block;  
+    margin: 24px auto;
+    border-radius: 8px;
+}
+
+
+/* Selection */
+::selection {
+  background-color: var(--accent); 
+  color: #FFFFFF; 
+}
+
+::-moz-selection {
+  background-color: var(--accent);
+  color: #FFFFFF;
+}   
+
+
+
+
+/* Matrix*/
+#matrix-canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999 !important; /* Forces it behind absolutely everything */
+  pointer-events: none; /* Lets you click links through the rain */
+  opacity: 0; /* Hides it in Clean Mode */
+  transition: opacity 0.5s ease; 
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+:root.matrix-mode #matrix-canvas {
+  opacity: 1;
+}
+
+:root.matrix-mode body,
+:root.matrix-mode main,
+:root.matrix-mode .wrapper,
+:root.matrix-mode .page-content {
+  background-color: transparent !important;
+}
+
+#matrix-canvas {
+  opacity: 0; 
+  transition: opacity 0.5s ease; 
+}
+
+:root.matrix-mode #matrix-canvas {
+  opacity: 1;
+}

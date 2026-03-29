@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Leslie Jury: {{ page.title }}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <script>
         const savedTheme = localStorage.getItem('portfolio-theme');
         if (savedTheme === 'matrix') {
@@ -35,27 +34,27 @@
 
     <nav class="left-sidebar" aria-label="Primary navigation">
         <!-- Edit these links to point to your pages: about.html, contact.html, projects.html, hobbies.html -->
-        <a class="nav-btn" href="index.html" title="Home">
+        <a class="nav-btn" href="{{ '/' | relative_url }}" title="Home">
             <span style="font-size:18px">🏠</span>
             <span style="font-size:10px">Home</span>
         </a>
-        <a class="nav-btn" href="about.html" title="About">
+        <a class="nav-btn" href="{{ '/about.html' | relative_url }}" title="About">
             <span style="font-size:18px">👋</span>
             <span style="font-size:10px">About</span>
         </a>
-        <a class="nav-btn" href="projects.html" title="Projects">
+        <a class="nav-btn" href="{{ '/projects.html' | relative_url }}" title="Projects">
             <span style="font-size:18px">💻</span>
             <span style="font-size:10px">Projects</span>
         </a>
-        <a class="nav-btn" href="contact.html" title="Contact">
+        <a class="nav-btn" href="{{ '/contact.html' | relative_url }}" title="Contact">
             <span style="font-size:18px">✉️</span>
             <span style="font-size:10px">Contact</span>
         </a>
-        <a class="nav-btn" href="devlog.html" title="Devlog">
+        <a class="nav-btn" href="{{ '/blog.html' | relative_url }}" title="Blog">
             <span style="font-size:18px">📓</span>
-            <span style="font-size:10px">Devlog</span>
+            <span style="font-size:10px">Blog</span>
         </a>
-        <a id="theme-toggle" class="nav-btn" href="#" title="Toggle Theme">
+        <a id="theme-toggle" class="nav-btn" href="{{ '/theme-toggle.html' | relative_url }}" title="Toggle Theme">
             <span style="font-size:18px">💊</span>
             <span id="theme-text" style="font-size:10px">Matrix</span>
         </a>
