@@ -1,4 +1,3 @@
-
 :root{
 
     --banner-height: 72px; /* height of the top banner */
@@ -43,7 +42,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-h1, a , h2, h3, h4, h5, p {
+h1, a , h2, h3, h4, h5, p, label {
   color: var(--text-color);
 }
 
@@ -335,18 +334,16 @@ article .new-card-body {
   border-top: 1px solid var(--accent); /* subtle divider */
 }
 
-.hero {
-  padding: 40px 20px;
-}
 
 .hero-container {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 40px;
+  margin: 0px 0px;
   max-width: 1000px;
-  margin: 0 auto;
   background: var(--grey-color);
-  padding: 12px;
+  padding: 0px;
   border-radius: 10px;
 }
 
@@ -470,3 +467,4 @@ article .new-card-body {
 :root.matrix-mode #matrix-canvas {
   opacity: 1;
 }
+
