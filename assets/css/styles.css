@@ -42,7 +42,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-h1, a , h2, h3, h4, h5, p, label {
+h1, a , h2, h3, h4, h5, p, label, details, summary {
   color: var(--text-color);
 }
 
