@@ -1,0 +1,304 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}   
+
+h1 {
+  font-family: 'Bodoni MT Std';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 37px;
+  color: #FF74B7;
+}
+
+p {
+  font-size: 14px;
+}
+
+body {
+  background-color: #ffffff;
+  padding: 0px; 
+}
+
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: inline-block;
+}
+
+nav a {
+  font-size: 14px;
+  background-color: #FF74B7;
+  color: #ffffff;
+  margin: 5px;
+  border-radius: 50px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-color: #FF74B7;
+}
+
+nav a:hover {
+  background-color: #FFE5F2;
+  color: rgb(0, 0, 0);
+}
+
+li, h2, h3, p, a{
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  color: black;
+}
+
+a {
+  color: #FF74B7;
+}
+
+
+h2 {
+  font-size: 20px;
+}
+
+button {
+  background-color: #FF74B7;
+  color: #ffffff;
+  margin: 5px;
+  border-radius: 50px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-color: #FF74B7;
+}
+
+strong {
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#top-banner {
+  width: 100%;
+  height: 50px;
+  background-color: #FF74B7;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 50;
+  box-sizing: border-box;
+}   
+
+.main-section {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+}
+
+#center-section {
+  gap: 100px;
+
+}
+
+#left-section {
+  width: 20vw;
+}
+
+
+#right-section {
+  background-color: #FFE5F2;
+  flex-direction: column;
+  width: 20vw;
+}
+
+
+
+.small-sec {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#profile-sec {
+  display: flex;
+}
+
+.small-title {
+  margin: 0;
+}
+
+.small-text {
+
+}
+
+.small-image {
+  margin: 10px;
+}
+
+#mini-profile {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+#basic-info {
+  margin: 10px;
+}
+
+.skills {
+  background-color: #ffffff;
+  color: #FF74B7;
+}
+
+
+
+/* Homepage specific*/
+
+/* Hero */
+#hero {
+  display: flex;
+}
+
+#hero-text {
+  margin-left: 20px;
+}
+
+.hero-para {
+  max-width: 350px;
+  line-height: 212%;
+  margin-top: 15px;
+}
+
+
+#hero-image {
+  width: 200px;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+
+/* Projects */
+#project-header {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 212%;
+  /* or 42px */
+  letter-spacing: 0.28em;
+  color: #141414;
+}
+
+.project-card-body {
+  margin: 0;
+  padding: 0;
+}
+
+.project-para {
+  max-width: 300px;
+  padding: 0;
+  gap: 10px;
+  line-height: 212%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.project-card-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 35px;
+}
+
+.grid-container div {
+  flex-direction: row;
+}
+#third-card {
+  grid-row: 2/3;
+}
+
+#left-section nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+#left-section nav ul li a {
+    display: block;
+    padding: 0.45rem 1.1rem;
+    background-color: #FF74B7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    box-shadow: 2px 2px 0px #d63384;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#left-section nav ul li a:hover {
+    background-color: #FF74B7;
+    transform: translateX(3px);
+    box-shadow: 1px 1px 0px #d63384;
+}
+
+#left-section nav ul li a:active {
+    transform: translateX(4px) translateY(1px);
+    box-shadow: none;
+}
+
+
+
+/*
+Poppins Regular
+font-family: "poppins", sans-serif;
+font-weight: 400;
+font-style: normal;
+Poppins Italic
+font-family: "poppins", sans-serif;
+font-weight: 400;
+font-style: italic;
+Poppins Bold
+font-family: "poppins", sans-serif;
+font-weight: 700;
+font-style: normal;
+Poppins Bold Italic
+font-family: "poppins", sans-serif;
+font-weight: 700;
+font-style: italic;
+*/
