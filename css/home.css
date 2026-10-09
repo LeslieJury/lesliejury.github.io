@@ -282,6 +282,32 @@ strong {
     box-shadow: none;
 }
 
+/* --- Dynamic Project Search & Tag Styles --- */
+
+/* Styles the search bar to match your theme */
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  border-radius: 50px; /* Matches your nav buttons */
+  border: 2px solid #FFE5F2; /* Uses your light pink */
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  color: #141414;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+/* Darkens the border to your main pink when clicked */
+.search-input:focus {
+  border-color: #FF74B7; 
+}
+
+/* Enforce max-width on project card body so content never exceeds the image width */
+.project-card-body {
+  max-width: 300px;
+  width: 100%;
+}
 
 
 /*
