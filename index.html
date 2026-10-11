@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/home.css">   
     <link rel="stylesheet" href="https://use.typekit.net/ggk3wtx.css">
+    <script src="js/components.js" defer></script>
 </head>
 <body>
 
@@ -13,22 +14,14 @@
 
     <main>
 
-        <div class="main-section" id="left-section">
-            <nav>
-            <ul>
-            <li><a href="/">Home °❀⋆.ೃ࿔*:･</a></li>
-            <li><a href="about.html">About °❀⋆.ೃ࿔*:･</a></li>
-            <li><a href="contact.html">Contact °❀⋆.ೃ࿔*:･</a></li>
-            <li><a href="projects.html">Projects °❀⋆.ೃ࿔*:･</a></li>
-            </ul>
-            </nav>  
-        </div>
+        <!-- Left Column injected by JS -->
+        <div class="main-section" id="left-section"></div>
 
         <div class="main-section" id="center-section">
-            <div id="hero">
-                <img src="images\big_profile.jpg" id="hero-image">
-                <div id="hero-text">
-                    <h1 id="hero-title">
+            <div class="hero">
+                <img src="images/big_profile.jpg" class="hero-image">
+                <div class="hero-text">
+                    <h1 class="hero-title">
                     Hi, I'm Leslie!
                     </h1>
                     <p class="hero-para">
@@ -39,9 +32,12 @@
                     </p>
                 </div> 
             </div>
+            
             <div id="projects">
                 <h2 id="project-header">✦ PROJECTS</h2>
-                <div class="grid-container"id="project-grid">
+                <a href="projects.html">See more</a>
+                <div class="grid-container" id="project-grid">
+                    
                     <article class="project-card">
                         <img class="project-card-image" src="images/dyberdeck1.jpeg" alt="Cyberdeck">
                         <div class="project-card-body">
@@ -67,103 +63,22 @@
                             </div>
                         </div>
                     </article>
-
-                    <article class="project-card" id="third-card">
-                        <img class="project-card-image" src="images/hackathon_circuit.jpg" alt="Hexcode game">
-                        <div class="project-card-body">
-                            <a href="projects/secret.html">
-                            <h3>HEXCODE GAME (ARDUINO & PI)</h3>
-                            </a>
-                            <div class="project-para">
-                                <p>For I-Hack 2023 We made a hexadecimal game where one adjusts the Red, Green, 
-                                and Blue values using potentiometers. I was in charge of the hardware aspects of this project.</p>
-                            </div>
-                        </div>
-                    </article>
-
-
-                    <article class="project-card" id="third-card">
-                        <img class="project-card-image" src="images/soldered.jpeg" alt="Audio Amplifier">
-                        <div class="project-card-body">
-                            <a href="projects/karaoke.html">
-                            <h3>KARAOKE MACHINE (AUDIO AMPLIFIER)</h3>
-                            </a>
-                            <div class="project-para">
-                                <p>In this project, I designed and fabricated a printed circuit board (PCB) for an audio amplifier. 
-                                    I made factory ready gerber files and sent them to a manufacturer. The most interesting step to me was the routing.</p>
-                            </div>
-                        </div>
-                    </article>
-
-
-
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="main-section" id="right-section">
-
-            <div class="small-sec">
-                <div id="profile-sec">
-                    <div class="small-image">
-                        <img src="images/profile.jpg" id="mini-profile">
-                    </div>
-                    <div class="small-text">
-                        <div class="small-title">
-                            <h2><strong>Leslie Jury</strong></h2>
-                        </div>
-                        <div class="small-subtitle">
-                            <p>Embedded Systems and Electronics</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="small-para">
-                    <a href="mailto:lesliejury3@gmail.com">lesliejury3@gmail.com</a>   
-                </div>
-                <div class="button-collection">
-                    <a href="files/current-resume.pdf" target="_blank"><button>Resume</button></a>
-                    <a href="https://www.linkedin.com/in/lesliejury/" target="_blank"><button>LinkedIn</button></a>
-
                 </div>
             </div>
 
-            <div class="small-sec">
-                <div class="small-text">
-                    <div class="small-title">
-                        <h2><strong>Basic Info</strong></h2>
-                    </div>
-                    <div class="small-para">
-                        <p>Computer Programmer with an emphasis in embedded systems. Interested in firmware, 
-                    hardware-software integration, PCB design, and full-stack creative projects.</p>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="small-sec">
-                <div class="small-text">
-                    <div class="small-title">
-                        <h2><strong>Technical Skills</strong></h2>
-                    </div>
-                </div>
-                <div class="button-collection">
-                    <button class="skills">Microcontrollers</button>
-                    <button class="skills">Python</button>
-                    <button class="skills">PCB</button>
-                    <button class="skills">FPGA</button>
-                    <button class="skills">Linux</button>
-                    <button class="skills">GIT</button>
-                    <button class="skills">IoT</button>
-                    <button class="skills">Windows/Mac</button>
-                </div>
-
+            <div>
+                <img src="/images/leslie-rainbow-1.jpg"/>
+                <p>Image of me at the BYU Art Museum after a career fair</p>
             </div>
 
         </div>
+
+        <!-- Right Column injected by JS -->
+        <div class="main-section" id="right-section"></div>
 
     </main>
 
+    <!-- Link your new JS file right before the closing body tag -->
+    <script src="components.js"></script>
 </body>
 </html>

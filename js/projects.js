@@ -22,19 +22,19 @@ const projects = [
         tags: ["Arduino", "Hardware", "Potentiometers"]
     },
     {
-        title: "DISCRETE LOVE (RENPY)",
-        link: "projects/discrete.html",
-        image: "images/discrete_love.png",
-        description: "For my Discrete Math class I made a dating sim where you learn discrete math as you play. You can even test your skills with boss battles at the end.",
-        tags: ["Python", "Videogame", "RenPy"]
-    },
-    {
         title: "MARBACH ANIMAL HOSPITAL WEBSITE",
         link: "projects/marbach.html",
-        image: "images/marbach.jpg",
+        image: "images/small_marbach.png",
         description: "I made a real professional website for an animal hospital in San Antonio, TX in collaboration with a web designer.",
         tags: ["Web Development", "HTML & CSS"]
     },
+    {
+        title: "UMAMUSUME PRODUCTIVITY HELPER",
+        link: "projects/productivity.html",
+        image: "images/uma_landing.png",
+        description: "I made a dyanamic, JavaScript-based web app centered around ",
+        tags: ["Web Development", "JavaScript", "HTML & CSS"]
+    }
 
 ];
 

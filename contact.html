@@ -6,97 +6,54 @@
     <title>Contact</title>
     <link rel="stylesheet" href="css/home.css">   
     <link rel="stylesheet" href="https://use.typekit.net/ggk3wtx.css">
+    <script src="js/components.js" defer></script>
+
 </head>
+ 
 <body>
-
     <header id="top-banner"></header>
-
     <main>
-
-        <div class="main-section" id="left-section">
-            <nav>
-            <ul>
-            <li><a href="/">Home °❀⋆.ೃ࿔*:･</a></li>
-            <li><a href="about.html">About °❀⋆.ೃ࿔*:･</a></li>
-            <li><a href="contact.html">Contact °❀⋆.ೃ࿔*:･</a></li>
-            <li><a href="projects.html">Projects °❀⋆.ೃ࿔*:･</a></li>
-            </ul>
-            </nav>  
-        </div>
-
-
-
+        <div class="main-section" id="left-section"></div>
+        
         <div class="main-section" id="center-section">
-            <div id="intro">
-                <p>
-                    Hello Leslie!
-                </p>
-            </div>
+            <div class="intro">
+                <h1>Contact Me!</h1>
+
+                <div class="contact-intro">
+                    <p><strong>Email:</strong> <a href="mailto:lesliejury3@gmail.com">lesliejury3@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+17204912202">+1 (720) 491-2202</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lesliejury" target="_blank" rel="noopener">linkedin.com/in/lesliejury</a></p>
+                    <p><strong>Location:</strong> Longmont, CO, USA</p>
+                </div>
+
+                <form action="https://formspree.io/f/xwvwoejp" method="POST">
             
-        </div>
+                <label>
+                    Your Name:
+                </label>
+                <input type="name" name="name" required placeholder="Your Name">
 
-        <div class="main-section" id="right-section">
+                <label>
+                    Your Email:
+                </label>
+                <input type="email" name="email" required placeholder="youremail@example.com">
+                
+                <label>
+                    Your Message:
+                </label>
+                <textarea name="message" required placeholder="I love your website, let's connect!" ></textarea>
+                
+                <button type="submit">
+                    Send Message
+                </button>
 
-            <div class="small-sec">
-                <div id="profile-sec">
-                    <div class="small-image">
-                        <img src="images/profile.jpg" id="mini-profile">
-                    </div>
-                    <div class="small-text">
-                        <div class="small-title">
-                            <h2><strong>Leslie Jury</strong></h2>
-                        </div>
-                        <div class="small-subtitle">
-                            <p>Embedded Systems and Electronics</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="small-para">
-                    <a href="mailto:lesliejury3@gmail.com">lesliejury3@gmail.com</a>   
-                </div>
-                <div class="button-collection">
-                    <a href="files/current-resume.pdf" target="_blank"><button>Resume</button></a>
-                    <a href="https://www.linkedin.com/in/lesliejury/" target="_blank"><button>LinkedIn</button></a>
+                </form>
 
-                </div>
-            </div>
-
-            <div class="small-sec">
-                <div class="small-text">
-                    <div class="small-title">
-                        <h2><strong>Basic Info</strong></h2>
-                    </div>
-                    <div class="small-para">
-                        <p>Computer Programmer with an emphasis in embedded systems. Interested in firmware, 
-                    hardware-software integration, PCB design, and full-stack creative projects.</p>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="small-sec">
-                <div class="small-text">
-                    <div class="small-title">
-                        <h2><strong>Technical Skills</strong></h2>
-                    </div>
-                </div>
-                <div class="button-collection">
-                    <button class="skills">Microcontrollers</button>
-                    <button class="skills">Python</button>
-                    <button class="skills">PCB</button>
-                    <button class="skills">FPGA</button>
-                    <button class="skills">Linux</button>
-                    <button class="skills">GIT</button>
-                    <button class="skills">IoT</button>
-                    <button class="skills">Windows/Mac</button>
-                </div>
-
-            </div>
-
-        </div>
-
+            </div>        </div>
+        
+        <div class="main-section" id="right-section"></div>
     </main>
-
+    <script src="components.js"></script>
 </body>
+
 </html>
