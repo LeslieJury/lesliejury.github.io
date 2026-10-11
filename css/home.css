@@ -388,3 +388,64 @@ font-family: "poppins", sans-serif;
 font-weight: 700;
 font-style: italic;
 */
+
+
+/* Mobile Styles (Screens smaller than 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Stack the columns vertically instead of horizontally */
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* 2. Make all sections take up the full width of the screen */
+    #left-section, 
+    #center-section, 
+    #right-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* 3. Reorder the sections (Optional but recommended) */
+    /* On mobile, you usually want the Nav on top, then Hero, then sidebar info */
+    #left-section {
+        order: 1; /* Navigation first */
+    }
+    
+    #center-section {
+        order: 2; /* Hero and projects second */
+    }
+    
+    #right-section {
+        order: 3; /* Profile and skills at the bottom */
+    }
+
+    /* 4. Make the navigation horizontal for mobile */
+    #left-section nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    #left-section nav ul li {
+        list-style: none;
+    }
+
+    /* 5. Adjust the project grid to a single column */
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 project per row on mobile */
+    }
+
+    /* 6. Adjust font sizes for smaller screens */
+    .hero-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center; /* Centers the text under the image */
+    }
+}

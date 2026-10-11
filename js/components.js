@@ -14,7 +14,7 @@ const rightSectionHTML = `
     <div class="small-sec">
         <div id="profile-sec">
             <div class="small-image">
-                <img src="images/profile.jpg" id="mini-profile">
+                <img src="/images/profile.jpg" id="mini-profile">
             </div>
             <div class="small-text">
                 <div class="small-title">

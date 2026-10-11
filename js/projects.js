@@ -12,7 +12,7 @@ const projects = [
         link: "projects/lightstick.html",
         image: "images/lightstick0.jpeg",
         description: "I utilized C and the STM32 Nucleo Microcontroller to make an interactive lightstick that flashes to the BPM of your favorite songs.",
-        tags: ["C", "STM32", "Microcontrollers", "Embedded Systems"]
+        tags: ["C", "STM32", "Microcontrollers", "Embedded Systems", "Hardware"]
     },
     {
         title: "HEXCODE GAME (ARDUINO & PI)",
@@ -26,14 +26,14 @@ const projects = [
         link: "projects/marbach.html",
         image: "images/small_marbach.png",
         description: "I made a real professional website for an animal hospital in San Antonio, TX in collaboration with a web designer.",
-        tags: ["Web Development", "HTML & CSS"]
+        tags: ["Web Development", "HTML & CSS", "Software"]
     },
     {
         title: "UMAMUSUME PRODUCTIVITY HELPER",
         link: "projects/productivity.html",
         image: "images/uma_landing.png",
         description: "I made a dyanamic, JavaScript-based web app centered around ",
-        tags: ["Web Development", "JavaScript", "HTML & CSS"]
+        tags: ["Web Development", "JavaScript", "HTML & CSS", "Software"]
     }
 
 ];
