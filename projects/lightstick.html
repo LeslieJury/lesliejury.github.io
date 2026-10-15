@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Lightstick (STM32)</title>
-    <link rel="stylesheet" href="../css/home.css">   
-    <link rel="stylesheet" href="https://use.typekit.net/ggk3wtx.css">
-    <script src="js/components.js" defer></script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightstick</title>
+<link rel="stylesheet" href="../css/home.css">
+<link rel="stylesheet" href="https://use.typekit.net/ggk3wtx.css">
+<script src="/js/components.js" defer></script>
 </head>
-
-
 <body>
-    <header id="top-banner"></header>
-    <main>
-        <div class="main-section" id="left-section"></div>
-        
-        <div class="main-section" id="center-section">
-            <div id="intro">
-                <h1>
-                    Lightstick
-                </h1>
-                
-            </div>
-            <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F874764798911874%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-            <div class="image-grid">
-                <img src="/images/lightstick0.jpeg" alt="Lightstick picture 1" />
-                <img src="/images/lightstick1.jpeg" alt="Lightstick picture 2" />
-            </div>
-            <embed src="/files/ECEN_260_Final_Project_Report.pdf" type="application/pdf" width="80%" height="600px" />   
-            
-        </div>
-        
-        <div class="main-section" id="right-section"></div>
-    </main>
-    <script src="components.js"></script>
+<header id="top-banner"></header>
+<main>
+<div class="main-section" id="left-section"></div>
+<div class="main-section" id="center-section">
+<article class="case-study">
+<p class="case-kicker">ECEN 260 / C / STM32</p>
+<h1>Lightstick</h1>
+<p class="lead">An interactive STM32 lightstick that responds to the BPM of a song, combining embedded C programming, timing logic, and a custom physical design.</p>
+<div class="case-study-section">
+<h2>Project demonstration</h2>
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2Freel%2F874764798911874%2F&amp;show_text=false&amp;width=560&amp;t=0" width="560" height="314" title="Lightstick project demonstration" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+</div>
+<div class="case-study-section">
+<h2>Designing the experience</h2>
+<p>The lightstick translates music into a physical light pattern. The microcontroller reads the timing of the song and drives the LEDs so the device feels synchronized instead of static.</p>
+<div class="focus-grid"><div><h3>Embedded C</h3><p>Writing the control logic and timing behavior for the STM32 board.</p></div><div><h3>Beat response</h3><p>Using BPM information to coordinate the lightstick’s visual rhythm.</p></div><div><h3>Hardware testing</h3><p>Connecting the components, testing the output, and refining the physical build.</p></div></div>
+</div>
+<div class="case-study-section">
+<h2>Build documentation</h2>
+<div class="case-gallery"><figure><img src="/images/lightstick0.jpeg" alt="Lightstick prototype"><figcaption>The lightstick prototype and its illuminated hardware.</figcaption></figure><figure><img src="/images/lightstick1.jpeg" alt="Lightstick hardware detail"><figcaption>A closer look at the lightstick build.</figcaption></figure></div>
+</div>
+<div class="case-study-section"><h2>Project report</h2><p>The final report documents the design decisions, implementation, and testing process behind the project.</p><iframe class="report-frame" src="/files/ECEN_260_Final_Project_Report.pdf" title="Lightstick project report"></iframe><a class="button button-quiet" href="/files/ECEN_260_Final_Project_Report.pdf" target="_blank" rel="noopener">Open report in a new tab</a></div>
+</article>
+</div>
+<div class="main-section" id="right-section"></div>
+</main>
 </body>
-
 </html>

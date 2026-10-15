@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Log</title>
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="https://use.typekit.net/ggk3wtx.css">
+<script src="js/components.js" defer></script>
+</head>
+<body>
+<header id="top-banner"></header>
+<main>
+<div class="main-section" id="left-section"></div>
+<div class="main-section" id="center-section">
+<article class="build-log-page">
+<p class="case-kicker">SMALL WINS / BUILD LOG / LINKEDIN</p>
+<h1>Build Log</h1>
+<p class="lead">Small experiments, progress updates, and interesting discoveries that are not quite full projects—but are still worth sharing.</p>
+<div class="build-log-intro"><p>These posts show the process behind my larger work: testing an idea, getting a circuit to respond, or learning something new in class.</p><a class="button button-quiet" href="https://www.linkedin.com/in/lesliejury/" target="_blank" rel="noopener">View my LinkedIn</a></div>
+<section class="build-log-list" aria-label="LinkedIn build log posts">
+<article class="build-log-entry"><div class="build-log-meta"><span>PROGRESS UPDATE</span><span>LINKEDIN / NFC</span></div><h2>Playing with an NFC scanner! 😁❤️</h2><p class="build-log-summary">A quick hardware experiment exploring NFC scanning and how a small interaction can become the starting point for a larger embedded project.</p><details class="linkedin-details" open><summary>Show original LinkedIn post</summary><iframe class="linkedin-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7470286184326295552" title="LinkedIn post about an NFC scanner" loading="lazy"></iframe></details><a class="build-log-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7470286184326295552/" target="_blank" rel="noopener">View post on LinkedIn →</a></article>
+<article class="build-log-entry"><div class="build-log-meta"><span>PROJECT PROCESS</span><span>LINKEDIN / COMMUNITY</span></div><h2>Speaking at a tech summer camp</h2><p class="build-log-summary">Today I was a keynote speaker at a tech summer camp hosted by the innovation center. I shared my innovation journey and advice about letting your personality shine in your projects—and even got to visit my old middle school, Trail Ridge.</p><details class="linkedin-details" open><summary>Show original LinkedIn post</summary><iframe class="linkedin-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7485395078400667648" title="LinkedIn post about speaking at a tech summer camp" loading="lazy"></iframe></details><a class="build-log-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7485395078400667648/" target="_blank" rel="noopener">View post on LinkedIn →</a></article>
+<article class="build-log-entry"><div class="build-log-meta"><span>LEARNING IN PUBLIC</span><span>LINKEDIN / C++</span></div><h2>Brushing up on my C++ skills</h2><p class="build-log-summary">I’m building a console app that simulates Umamusume: Pretty Derby. The current version trains character stats and uses them to calculate race outcomes, with plans for more characters, race logic, and win/loss behavior.</p><details class="linkedin-details" open><summary>Show original LinkedIn post</summary><iframe class="linkedin-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7472775756771643392" title="LinkedIn post about a C++ Umamusume simulator" loading="lazy"></iframe></details><a class="build-log-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7472775756771643392/" target="_blank" rel="noopener">View post on LinkedIn →</a></article>
+</section>
+</article>
+</div>
+<div class="main-section" id="right-section"></div>
+</main>
+<script>
+const mobileBuildLog = window.matchMedia("(max-width: 760px)");
+function setBuildLogEmbeds() { document.querySelectorAll(".linkedin-details").forEach(post => post.toggleAttribute("open", !mobileBuildLog.matches)); }
+setBuildLogEmbeds();
+mobileBuildLog.addEventListener("change", setBuildLogEmbeds);
+</script>
+</body>
+</html>
