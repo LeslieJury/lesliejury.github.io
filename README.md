@@ -43,23 +43,6 @@ The site is a static portfolio built with HTML, CSS, and vanilla JavaScript. It 
 └── files/                 # Resume and project reports
 ```
 
-## Run locally
-
-Because the site uses root-relative paths such as `/images/...`, serve it through a local web server instead of opening the HTML files directly.
-
-### VS Code Live Server
-
-1. Open the project folder in VS Code.
-2. Start Live Server from `index.html`.
-3. Visit the local URL shown by the extension.
-
-### Python
-
-```bash
-python -m http.server 5500
-```
-
-Then open [http://localhost:5500](http://localhost:5500).
 
 ## Notes
 
